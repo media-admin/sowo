@@ -1,0 +1,140 @@
+/* == FONTS == */
+
+/* KULIM PARK */
+
+/* kulim-park-regular - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Kulim Park';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../fonts/kulim-park/kulim-park-v14-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* kulim-park-italic - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Kulim Park';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../../fonts/kulim-park/kulim-park-v14-latin_latin-ext-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* kulim-park-600 - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Kulim Park';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../../fonts/kulim-park/kulim-park-v14-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* kulim-park-600italic - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Kulim Park';
+	font-style: italic;
+	font-weight: 600;
+	src: url('../../fonts/kulim-park/kulim-park-v14-latin_latin-ext-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* SOFIA SANS CONDENSED */
+
+/* sofia-sans-condensed-regular - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sofia-sans-condensed-italic - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: italic;
+	font-weight: 400;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sofia-sans-condensed-600 - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sofia-sans-condensed-600italic - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: italic;
+	font-weight: 600;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sofia-sans-condensed-700 - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sofia-sans-condensed-700italic - latin_latin-ext */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Sofia Sans Condensed';
+	font-style: italic;
+	font-weight: 700;
+	src: url('../../fonts/sofia-sans-condensed/sofia-sans-condensed-v2-latin_latin-ext-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* SLICK ICONS */
+	@font-face {
+		font-family: 'slick' !important;
+		font-style: normal !important;
+		font-weight: normal !important;
+		src: url('../../fonts/slick/slick.eot'); /* IE9 Compat Modes */
+		src: local(''),
+				 url('../../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				 url('../../fonts/slick/slick.woff') format('woff'), /* Modern Browsers */
+				 url('../../fonts/slick/slick.ttf') format('truetype'), /* Safari, Android, iOS */
+				 url('../../fonts/slick/slick.svg#slick') format('svg'); /* Legacy iOS */
+	}
+
+
+	/* FONT AWESOME SOLID */
+	@font-face {
+		font-family: 'FontAwesome Solid';
+		font-style: normal;
+		font-weight: normal;
+		src: url('../../fonts/fontawesome/fa-solid-900.eot'); /* IE9 Compact Modes */
+		src: local(''),
+				url('../../fonts/fontawesome/fa-solid-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../../fonts/fontawesome/fa-solid-900.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../../fonts/fontawesome/fa-solid-900.woff') format('woff'), /* Modern Browsers */
+				url('../../fonts/fontawesome/fa-solid-900.ttf') format('truetype'), /* Safari, Android, iOS */
+				url('../../fonts/fontawesome/fa-solid-900.svgFontAwesomeSolid') format('svg'); /* Legacy iOS */
+	}
+
+
+	/* Font Awesome Brands */
+	@font-face {
+		font-family: 'FontAwesome Brands';
+		font-style: normal;
+		font-weight: normal;
+		src: url('../../fonts/fontawesome/fa-brands-400.eot'); /* IE9 Compact Modes */
+		src: local(''),
+				url('../../fonts/fontawesome/fa-brands-400.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../../fonts/fontawesome/fa-brands-400.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../../fonts/fontawesome/fa-brands-400.woff') format('woff'), /* Modern Browsers */
+				url('../../fonts/fontawesome/fa-brands-400.ttf') format('truetype'), /* Safari, Android, iOS */
+				url('../../fonts/fontawesome/fa-brands-400.svg#FontAwesomeBrands') format('svg'); /* Legacy iOS */
+	}

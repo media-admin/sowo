@@ -1,0 +1,80 @@
+/* == PAGE AGBs GEBWERBLICH */
+.agbs {
+
+	& ol {
+
+		list-style-position: inside;
+		padding-top: 1.0rem;
+		padding-bottom: 0.5rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& ol.level-one > li {
+
+		font-size: 2.8rem;
+		line-height: 3.5rem;
+		font-weight: 300;
+		letter-spacing: 0.05rem;
+		color: $color-sowo;
+		padding-top: 2.0rem;
+		padding-bottom: 1.5rem;
+
+		@include atMedium {
+
+		}
+
+	}
+
+
+	& ol.level-two {
+		font-size: 1.8rem;
+		line-height: 2.6rem;
+		font-weight: 300;
+		letter-spacing: 0.05rem;
+		color: $color-dark-gray;
+		list-style-type: lower-latin;
+		list-style-position: outside;
+		margin-left: 2.0rem;
+		padding-top: 2.0rem;
+		padding-bottom: 1.5rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& ol li {
+		line-height: 2.25rem;
+		margin-top: 2.0rem;
+		margin-bottom: 1.5rem;
+	}
+
+
+	& ol.level-three {
+		font-size: 1.6rem;
+		line-height: 3.2rem;
+		font-weight: 300;
+		letter-spacing: 0.05rem;
+		color: $color-dark-gray;
+		list-style-type: decimal;
+		list-style-position: outside;
+		margin-left: 1.0rem;
+		padding-top: 2.0rem;
+		padding-bottom: 1.5rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& ol.level-three li li {
+		margin-left: -1.5rem;
+	}
+
+}

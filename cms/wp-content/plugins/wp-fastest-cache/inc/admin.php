@@ -17,8 +17,11 @@
 		}
 
 		function my_plugin_locale_filter($locale, $domain){
-
 			if($domain === 'wp-fastest-cache'){
+
+				if(!isset($this->options->wpFastestCacheLanguage)){
+					return "en_US";
+				}
 
 				$locale = $this->options->wpFastestCacheLanguage;
 				
@@ -267,9 +270,6 @@
 				}
 			}
 			
-			if(isset($this->options->wpFastestCacheLanguage) && $this->options->wpFastestCacheLanguage != "eng"){
-				wp_enqueue_script("wpfc-dictionary", plugins_url("wp-fastest-cache/js/lang/".$this->options->wpFastestCacheLanguage.".js"), array(), time(), false);
-			}
 		}
 
 		public function saveOption(){
@@ -741,17 +741,29 @@
 			$trailing_slash_rule = "";
 			$consent_cookie = "";
 
-			$language_negotiation_type = apply_filters('wpml_setting', false, 'language_negotiation_type');
-			if(($language_negotiation_type == 2) && $this->isPluginActive('sitepress-multilingual-cms/sitepress.php')){
-				$cache_path = '/cache/%{HTTP_HOST}/all/';
-				$disable_condition = true;
-			}else if($this->isPluginActive('polylang/polylang.php')){
-				$cache_path = '/cache/%{HTTP_HOST}/all/';
-				$disable_condition = true;
-			}else{
-				$cache_path = '/cache/all/';
-				$disable_condition = false;
+			$cache_path = '/cache/all/';
+
+
+			if($this->isPluginActive('sitepress-multilingual-cms/sitepress.php')){
+				$language_negotiation_type = apply_filters('wpml_setting', false, 'language_negotiation_type');
+
+				if($language_negotiation_type == 2){
+					$cache_path = '/cache/%{HTTP_HOST}/all/';
+				}
 			}
+
+			if($this->isPluginActive('polylang/polylang.php')){
+				$polylang_settings = get_option("polylang");
+
+				if(isset($polylang_settings["force_lang"])){
+					if($polylang_settings["force_lang"] == 2 || $polylang_settings["force_lang"] == 3){
+						// The language is set from the subdomain name in pretty permalinks
+						// The language is set from different domains
+						$cache_path = '/cache/%{HTTP_HOST}/all/';
+					}
+				}
+			}
+
 
 			if(isset($_POST["wpFastestCacheMobile"]) && $_POST["wpFastestCacheMobile"] == "on"){
 				$mobile = "RewriteCond %{HTTP_USER_AGENT} !^.*".$this->getMobileUserAgents().".*$ [NC]"."\n";
@@ -790,13 +802,13 @@
 					"RewriteCond %{HTTP_USER_AGENT} !(WP\sFastest\sCache\sPreload(\siPhone\sMobile)?\s*Bot)"."\n".
 					"RewriteCond %{REQUEST_METHOD} !POST"."\n".
 					$ifIsNotSecure."\n".
-					"RewriteCond %{REQUEST_URI} !(\/){2}$"."\n".
+					"RewriteCond %{REQUEST_URI} !(\/){2,}"."\n".
+					"RewriteCond %{THE_REQUEST} !(\/){2,}"."\n".
 					$trailing_slash_rule.
 					"RewriteCond %{QUERY_STRING} !.+"."\n".$loggedInUser.
 					$consent_cookie.
 					"RewriteCond %{HTTP:Cookie} !comment_author_"."\n".
 					//"RewriteCond %{HTTP:Cookie} !woocommerce_items_in_cart"."\n".
-					"RewriteCond %{HTTP:Cookie} !safirmobilswitcher=mobil"."\n".
 					'RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]'."\n".$mobile;
 			
 
@@ -977,6 +989,8 @@
 			
 			$wpFastestCacheRenderBlockingCss = isset($this->options->wpFastestCacheRenderBlockingCss) ? 'checked="checked"' : "";
 
+			$wpFastestCacheDelayJS = isset($this->options->wpFastestCacheDelayJS) ? 'checked="checked"' : "";
+
 			$wpFastestCacheLanguage = isset($this->options->wpFastestCacheLanguage) ? $this->options->wpFastestCacheLanguage : "eng";
 			
 
@@ -1019,6 +1033,7 @@
 			$wpFastestCachePreload_number = isset($this->options->wpFastestCachePreload_number) ? esc_attr($this->options->wpFastestCachePreload_number) : 4;
 			$wpFastestCachePreload_restart = isset($this->options->wpFastestCachePreload_restart) ? 'checked="checked"' : "";
 			$wpFastestCachePreload_order = isset($this->options->wpFastestCachePreload_order) ? esc_attr($this->options->wpFastestCachePreload_order) : "";
+			$wpFastestCachePreload_sitemap = isset($this->options->wpFastestCachePreload_sitemap) ? esc_attr($this->options->wpFastestCachePreload_sitemap) : "";
 
 
 
@@ -1274,7 +1289,7 @@
 							<div class="questionCon">
 								<div class="question"><?php _e('Gzip', 'wp-fastest-cache'); ?></div>
 								<div class="inputCon"><input type="checkbox" <?php echo $wpFastestCacheGzip; ?> id="wpFastestCacheGzip" name="wpFastestCacheGzip"><label for="wpFastestCacheGzip"><?php _e("Reduce the size of files sent from your server", "wp-fastest-cache"); ?></label></div>
-								<div class="get-info"><a target="_blank" href="http://www.wpfastestcache.com/optimization/enable-gzip-compression/"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
+								<div class="get-info"><a target="_blank" href="https://www.wpfastestcache.com/tutorial/how-to-enable-gzip-compression-in-wordpress/#advantage"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
 							</div>
 
 							<?php
@@ -1380,6 +1395,33 @@
 									<div class="get-info"><a target="_blank" href="http://www.wpfastestcache.com/premium/lazy-load-reduce-http-request-and-page-load-time/"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
 								</div>
 							<?php } ?>
+
+
+							<?php if(defined('WPFC_ENABLE_DELAY_JS') && WPFC_ENABLE_DELAY_JS){ ?>
+
+								<?php if(class_exists("WpFastestCachePowerfulHtml")){ ?> 
+									<?php if(method_exists("WpFastestCachePowerfulHtml", "google_fonts")){ ?>
+										<div class="questionCon">
+											<div class="question"><?php _e('Delay Js', 'wp-fastest-cache'); ?></div>
+											<div class="inputCon"><input type="checkbox" <?php echo $wpFastestCacheDelayJS; ?> id="wpFastestCacheDelayJS" name="wpFastestCacheDelayJS"><label for="wpFastestCacheDelayJS"><?php _e("Some js sources will not be loaded until scrolling or moving the mouse", "wp-fastest-cache"); ?></label></div>
+											<div class="get-info"><a target="_blank" href="https://www.wpfastestcache.com/premium/delay-javascript/"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
+										</div>
+									<?php }else{ ?>
+										<div class="questionCon update-needed">
+											<div class="question"><?php _e('Delay Js', 'wp-fastest-cache'); ?></div>
+											<div class="inputCon"><input type="checkbox" id="wpFastestCacheDelayJS" name="wpFastestCacheDelayJS"><label for="wpFastestCacheDelayJS"><?php _e("Some js sources will not be loaded until scrolling or moving the mouse", "wp-fastest-cache"); ?></label></div>
+											<div class="get-info"><a target="_blank" href="https://www.wpfastestcache.com/premium/delay-javascript/"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
+										</div>
+									<?php } ?>
+								<?php }else{ ?>
+									<div class="questionCon disabled">
+										<div class="question"><?php _e('Delay Js', 'wp-fastest-cache'); ?></div>
+										<div class="inputCon"><input type="checkbox" id="wpFastestCacheDelayJS" name="wpFastestCacheDelayJS"><label for="wpFastestCacheDelayJS"><?php _e("Some js sources will not be loaded until scrolling or moving the mouse", "wp-fastest-cache"); ?></label></div>
+										<div class="get-info"><a target="_blank" href="https://www.wpfastestcache.com/premium/delay-javascript/"><img src="<?php echo plugins_url("wp-fastest-cache/images/info.png"); ?>" /></a></div>
+									</div>
+								<?php } ?>
+								
+							<?php } ?>
 							
 
 
@@ -1391,34 +1433,35 @@
 									<select id="wpFastestCacheLanguage" name="wpFastestCacheLanguage" style="width: 100px !important;">
 										<?php
 											$lang_array = array (
-																'en_US' => "English",
-																'id_ID' => 'Bahasa Indonesia',
-																'de_DE' => 'Deutsch',
-																'en_ZA' => 'English (South Africa)',
-																'en_GB' => 'English (UK)',
-																'es_ES' => 'Español',
-																'es_AR' => 'Español (Argentine)',
-																'es_CO' => 'Español (Colombia)',
-																'es_EC' => 'Español (Ecuador)',
-																'es_MX' => 'Español (México)',
-																'es_VE' => 'Español (Venezuela)',
-																'fr_FR' => 'Français',
-																'gl_ES' => 'Galego',
-																'it_IT' => 'Italiano',
-																'hu_HU' => 'Magyar',
-																'nl_NL' => 'Nederlands',
-																'nl_BE' => 'Nederlands (België)',
-																'sk_SK' => 'Slovenčina',
-																'fi' => 'Suomi',
-																'sv_SE' => 'Svenska',
-																'tr_TR' => 'Türkçe',
-																'cs_CZ' => 'Čeština',
-																'ru_RU' => 'Русский',
-																'fa_IR' => 'فارسی',
-																'zh_CN' => '中文（中国大陆）',
-																'zh_TW' => '中文（台灣）',
-																'ja' => '日本語'
-														);
+															  'id_ID' => 'Bahasa Indonesia',
+															  'de_DE' => 'Deutsch',
+															  'en_US' => 'English',
+															  'en_ZA' => 'English (South Africa)',
+															  'en_GB' => 'English (UK)',
+															  'es_ES' => 'Español',
+															  'es_AR' => 'Español (Argentine)',
+															  'es_CO' => 'Español (Colombia)',
+															  'es_EC' => 'Español (Ecuador)',
+															  'es_MX' => 'Español (México)',
+															  'es_VE' => 'Español (Venezuela)',
+															  'fr_FR' => 'Français',
+															  'gl_ES' => 'Galego',
+															  'it_IT' => 'Italiano',
+															  'hu_HU' => 'Magyar',
+															  'nl_NL' => 'Nederlands',
+															  'nl_BE' => 'Nederlands (België)',
+															  'sk_SK' => 'Slovenčina',
+															  'fi' => 'Suomi',
+															  'sv_SE' => 'Svenska',
+															  'tr_TR' => 'Türkçe',
+															  'cs_CZ' => 'Čeština',
+															  'ru_RU' => 'Русский',
+															  'fa_IR' => 'فارسی',
+															  'zh_CN' => '中文（中国大陆）',
+															  'zh_TW' => '中文（台灣）',
+															  'ja' => '日本語',
+															  'ko_KR' => '한국어 (한국)'
+															);
 
 											foreach($lang_array as $lang_array_key => $lang_array_value){
 												$option_selected = "";
@@ -1426,7 +1469,7 @@
 												if(isset($this->options->wpFastestCacheLanguage) && ($this->options->wpFastestCacheLanguage == $lang_array_key)){
 													$option_selected = 'selected="selected"';
 												}else{
-													if($lang_array_key == "en_EN"){
+													if($lang_array_key == "en_US" || $lang_array_key == "en_EN"){
 														$option_selected = 'selected="selected"';
 													}
 												}

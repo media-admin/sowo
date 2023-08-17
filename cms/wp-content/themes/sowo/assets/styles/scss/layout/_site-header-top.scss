@@ -1,0 +1,132 @@
+/* == SITE HEADER TOP */
+.site-header-top {
+  display: none;
+
+  @include atMedium {
+    display: block;
+    width: 100%;
+    position: relative;
+    min-height: 55px;
+    background-color: $color-white;
+    padding-top: 1.5rem;
+    padding-right: 1.0rem;
+    padding-left: 1.0rem;
+    overflow: hidden;
+    z-index: 10;
+  }
+}
+
+
+.site-header-top a {
+  text-decoration: none;
+}
+
+
+.site-header-top__wrapper {
+
+  @include atMedium {
+    position: relative;
+    max-width: 1136px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin: 0 auto;
+  }
+}
+
+
+.site-header-top__contact-information {
+  width: 60%;
+  display: inline-flex;
+}
+
+
+.site-header-top__contact-information-email {
+  width: 25%;
+}
+
+
+.site-header-top__contact-information-email-icon {
+  width: 1.5rem;
+  height: auto;
+}
+
+
+.site-header-top__contact-information-email-address {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 300;
+}
+
+
+.site-header-top__contact-information-phone {
+  width: 25%;
+}
+
+
+.site-header-top__contact-information-phone-icon {
+  width: 1.5rem;
+  height: auto;
+}
+
+
+.site-header-top__contact-information-phone-number {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 300;
+}
+
+
+.site-header-top__contact-information-address {
+  width: 50%;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  font-weight: 300;
+}
+
+
+.site-header-top__contact-information-address-icon {
+  width: 1.3rem;
+  height: auto;
+}
+
+
+.language__container {
+  width: 10%;
+}
+
+
+.language__list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+
+.language__list-item:first-child::after {
+  content: '|';
+  color: $color-sowo;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
+.language__list-item {
+  font-size: 2.0rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+
+.language__list-item-link {
+  display: inline-block;
+}
+
+
+.language__list-item a  {
+  color: $color-sowo;
+}

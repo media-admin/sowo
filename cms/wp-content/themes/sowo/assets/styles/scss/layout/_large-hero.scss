@@ -1,57 +1,106 @@
 /* == LARGE HERO */
-.section-large-hero {
+.large-hero {
   position: relative;
+  top: -105px;
   width: 100%;
-  min-height: 250px;
-  max-height: 500px;
-  height: auto;
+  height: 100vh;
   margin: 0;
-  background-image: url('../../assets/images/backgrounds/bg_hero-header.jpg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  object-fit: contain;
+  overflow: hidden;
+  z-index: -1;
 
   @include atMedium {
+    /* max-width: 1136px; */
+    width: 100%;
     position: relative;
-    min-height: 768px;
-    max-height: 780px;
+    /* min-height: 478px;
+    max-height: 478px; */
+    height: auto;
     /*     top: -105px; */
-    background-size: cover;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: center center;
     margin: 0 auto;
-    margin-bottom: 5rem;
-    z-index: 0;
     overflow: hidden;
   }
-
-  &__img {
-    position: relative;
-    display: block;
-    max-width: calc(1136px + 2rem);
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-
-  &__site-title {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(#172905,0.7);
-    background-blend-mode: multiply;
-    bottom: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-
-    @include atMedium {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-
-  }
-
 }
+
+
+.large-hero__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center center;
+  z-index: -1;
+}
+
+
+.large-hero__img--desktop {
+  display: none;
+}
+
+
+.large-hero__img--smartphone {
+
+  @include atMedium {
+    display: none;
+  }
+}
+
+
+.large-hero__img--desktop {
+
+  @include atMedium {
+    display: initial;
+  }
+}
+
+
+.large-hero__text {
+
+  @include atMedium {
+    max-width: 50%;
+     width: auto;
+  }
+}
+
+
+.large-hero__text {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  max-width: 60%;
+  width: auto;
+
+  @include atMedium {
+    max-width: 50%;
+    width: auto;
+  }
+}
+
+
+/* .large-hero__text h1 {
+  display: inline;
+  font-size: 1.8rem;
+  font-family: "Lexend", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  line-height: 5.4rem;
+  color: $color-tertiary;
+  background-color: $color-primary;
+  border: 3px solid $color-secondary;
+  padding: 0.8rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  @include atMedium {
+    font-size: 4.6rem;
+    line-height: 9rem;
+    left: 6.0rem;
+  }
+}
+
+
+.home .large-hero__text {
+  text-indent: -99999999px;
+} */

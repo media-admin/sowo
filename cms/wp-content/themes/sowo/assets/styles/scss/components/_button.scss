@@ -1,37 +1,40 @@
 /* == BUTTONS == */
+.underlined {
+  text-decoration: underline;
+}
+
+
+.border--white img {
+  border-color: $color-white !important;
+}
+
+
+.border--none img {
+  border: none !important;
+}
+
+
 .btn,
 .btn:link,
 .btn:visited {
   position: relative;
   display: inline-block;
-  font-family: "Alumni Sans", sans-serif;
-  font-weight: 800;
-  font-size: 2.6rem;
-  line-height: 3.1rem;
-  letter-spacing: 0.2rem;
-  color: $color-yellow;
-  background-color: $color-secondary;
-  border-radius: 8px;
-  border: 0px solid;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 2px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  letter-spacing: 5px;
+  color: inherit;
+  border: 1px solid;
+  margin: 1rem 0;
+  margin-top: 3rem;
   padding: 0.75rem 1.5rem;
 }
+
 
 .btn--white,
 .btn--white:link,
 .btn--white:visited {
-  color: white;
-}
-
-
-.button--load-more {
-  position: relative !important;
-  display: inline-block !important;
-  width: auto !important;
-  margin: 0.25rem 0;
-  margin-bottom: 2rem;
-  padding: 0.75rem 1rem;
+  color: $color-white;
 }

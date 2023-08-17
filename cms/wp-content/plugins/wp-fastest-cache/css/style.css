@@ -6,6 +6,7 @@
     width: 750px;
     height: auto;
     float: left;
+    box-sizing: unset;
 }
 
 .tabGroup div.questionCon{
@@ -17,6 +18,7 @@
 
 .tabGroup select, .tabGroup label, .tabGroup div {
     font-size: 12px;
+    box-sizing: unset;
     
 }
 .tabGroup > label{

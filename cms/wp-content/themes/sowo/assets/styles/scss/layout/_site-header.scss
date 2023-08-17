@@ -1,0 +1,147 @@
+/* == SITE HEADER */
+.site-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+
+  @include atMedium {
+    max-width: 1136px;
+    width: 100%;
+    height: 65px;
+    color: $color-white;
+    margin: 0 auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    z-index: 100 !important;
+  }
+}
+
+
+.site-header__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include atMedium {
+    max-width: 1136px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 65px;
+  }
+}
+
+
+.site-header a {
+  color: $color-dark-gray;
+  text-decoration: none;
+  color: $color-dark-gray;
+}
+
+
+.site-header__branding {
+
+
+  @include atMedium {
+    width: initial;
+    margin-left: 0.0rem;
+    z-index: 10;
+  }
+}
+
+
+.site-header__logo {
+  position: relative;
+  min-width: 170px;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 0.5rem;
+
+  @include atMedium {
+    position: relative;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+    /* min-width: 150px;
+    min-height: 120px; */
+    margin-left: 0.0rem;
+  }
+}
+
+.header-logo__link {
+  width: 100%;
+  height: 100%;
+}
+
+
+.site-header__logo-img {
+  width: 100%;
+  height: auto;
+
+  @include atMedium {
+
+  }
+}
+
+
+
+
+.mobile-language__container {
+  width: 100%;
+
+  @include atMedium {
+    display: none;
+  }
+}
+
+
+.mobile-language__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+
+.mobile-language__list-item:first-child::after {
+  content: '|';
+  color: $color-white;
+  margin-left: 0.25rem;
+  margin-right: 0.75rem;
+}
+
+
+.mobile-language__list-item {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+
+
+.mobile-language__list-item-link {
+  display: inline-block;
+}
+
+
+.mobile-language__list-item a  {
+  color: $color-white;
+}
+
+
+
+.site-header__nav-container {
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 1rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}

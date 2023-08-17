@@ -3,8 +3,8 @@ Contributors: emrevona
 Donate link: https://profiles.wordpress.org/emrevona/
 Tags: cache, Optimize, performance, wp-cache, core web vitals
 Requires at least: 3.3
-Tested up to: 6.2
-Stable tag: 1.1.4
+Tested up to: 6.3
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,32 +78,13 @@ It is very inconvenient to use multiple caching plugins at the same time. That's
 
 WP Fastest Cache is compatible with most popular plugins such as Contact Form 7, Yoast SEO, Elementor Website Builder, Classic Editor, Akismet Spam Protection, WooCommerce, Contact Form by WPForms, Really Simple SSL, All-in-One WP Migration, Yoast Duplicate Post, Wordfence Security – Firewall & Malware Scan, WordPress Importer, UpdraftPlus WordPress Backup Plugin, MonsterInsights, All in One SEO, WP Mail SMTP by WPForms.
 
-<h4>Supported languages: </h4>
+<h4>Supported Languages</h4>
 
-* Bahasa Indonesia
-* Deutsch (by Thomas Cloer)
-* Español (by Javier Esteban)
-* Español de Argentina (by Mauricio Lopez)
-* Español (Colombia) (by Javier Esteban)
-* Español (Ecuador) (by Javier Esteban)
-* Español (México) (by Yordan Soares)
-* Español de Venezuela (by Yordan Soares)
-* Français (by Cyrille Sanson)
-* Galego (by Jesús Amieiro)
-* Italiano
-* Magyar
-* Nederlands
-* Nederlands (België) (by Pieterjan Deneys)
-* Slovenčina
-* Suomi (by arhipaiva)
-* Svenska
-* Türkçe
-* Čeština
-* Русский
-* فارسی
-* 中文（中国大陆）
-* 中文（台灣) (by (Alex Lion))
-* 日本語
+Although there are over 7000 languages spoken in the world today, we feel very lucky to support 27 languages for now.
+
+However, localizing or adapting a plugin to another language or culture is time consuming and a demanding task. That's where the amazing Translation Contributors team of WordPress comes into play. These selfless people spent their precious time without expecting anything in return so that other people can use the add-ons more easily. We sincerely thank all of them.
+
+Chinese Simplified (China), Chinese Traditional (Taiwan), Czech, Dutch (Belgium), Dutch (Netherlands), English (South Africa), English (UK), Finnish, French (France), Galician, German (Germany), Hungarian, Indonesian, Italian, Japanese, Korean (Korea), Persian, Russian, Slovak (Slovakia), Spanish (Argentina), Spanish (Colombia), Spanish (Ecuador), Spanish (Mexico), Spanish (Spain), Spanish (Venezuela), Swedish, Turkish
 
 == Installation ==
 
@@ -134,6 +115,31 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 18. Database Cleanup
 
 == Changelog ==
+
+= 1.1.8 =
+* [FEATURE] to add Sitemap option for the preload feature [<a target="_blank" href="https://www.wpfastestcache.com/features/preload-settings/#methods">Details</a>]
+* to update translation files
+* to fix PHP Warning: Attempt to read property "term_taxonomy_id" on bool in wpFastestCache.php on line 1638
+
+= 1.1.7 =
+* to change the cache path for the Polylang plugin
+* [FEATURE] to add Korean (Korea) language
+* to update translation files
+* refactoring of is_amp()
+* to replace empty char which exist in the admin cookie with %20 for RewriteCond
+
+= 1.1.6 =
+* to update translation files
+* to fix problem that the first js source is not able to be excluded
+* refactoring of set_cache_file_path()
+* refactoring of Buffer Callback Filter [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/buffer-callback-filter/#how-to-remove-trailing-slash-on-void-elements">Details</a>]
+
+= 1.1.5 =
+* to replace wp_remote_get() with wp_safe_remote_get() in the check_url() function
+* to update translation files
+* to fix PHP Warning: Undefined array key "roles" in wpFastestCache.php on line 962
+* to remove multiple slashes from url
+* to fix PHP Warning: Attempt to read property “wpFastestCacheLanguage” on array in admin.php on line 23
 
 = 1.1.4 =
 * to check trailing slash for query string cache
@@ -206,181 +212,6 @@ WP Fastest Cache is compatible with most popular plugins such as Contact Form 7,
 = 1.0.0 =
 * to define the save_settings() function of single preload feature as static function
 
-= 0.9.9 =
-* to clear cache when regular price of woocommorce is updated
-* refactoring of Automatic Cache
-
-= 0.9.8 =
-* to clear cache after updating Elementor Website Builder plugin
-* to clear cache after theme or plugin update by custom settings [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-after-theme-or-plugin-update/">Details</a>]
-* to enable Auto Cache Panel for the classic editor which is enabled via add_filter()
-
-= 0.9.7 =
-* to clear cache after theme or plugin update by default [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-after-theme-or-plugin-update/">Details</a>]
-
-= 0.9.6 =
-* refactoring of serving non-exists minified files
-* to fix htaccess rule for Polylang plugin
-* to fix condition of clear cache after plugin update
-
-= 0.9.5 =
-* to prevent generating cache when DONOTCACHEPAGE is defined as true for Divi theme
-* to add nonce security system for cdn saving 
-
-= 0.9.4 =
-* to make compatible the Auto Cache feature with the Disable Gutenberg plugin
-* refactoring of rewrite rule of HTTP_USER_AGENT
-* to check that resources have been successfully optimized
-
-= 0.9.3 =
-* to prevent removing "/" for exclude rules
-* <strong>[FEATURE]</strong> to add "pause" feature for cdn [<a target="_blank" href="https://www.wpfastestcache.com/features/temporarily-disable-cdn/">Details</a>]
-* to add wpfc_clear_all_site_cache() for clearing cache of all sites [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/delete-the-cache-by-calling-the-function/">Details</a>]
-* to add spinner for the buttons on the cdn wizard
-* refactroing of excluding "There has been a critical error on this website" page
-
-= 0.9.2 =
-* <strong>[FEATURE]</strong> to create cache after publishing new post or updating a post [<a target="_blank" href="https://www.wpfastestcache.com/features/automatic-cache/">Details</a>]
-* <strong>[FEATURE]</strong> Clear cache after activate/deactivate plugin [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-after-activate-deactivate-a-plugin/">Details</a>]
-
-= 0.9.1.9 =
-* <strong>[FEATURE]</strong> Clear cache after switch theme [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-after-switch-theme/">Details</a>]
-
-= 0.9.1.8 =
-* to make compatible the preload feature with WPML
-* refactoring of clearing cache of content which is moved to trash
-* to fix Notice: Undefined variable: no_selected in single-preload.php on line 39
-* to add image/avif for browser caching
-
-= 0.9.1.7 =
-* to clear cache of the store homepage after WooCommerce order
-* to fix vulnerability (discoverd by Gen Sato)
-* to clear cache after Woocommerce order status changed
-* to add WPFC_DISABLE_CLEARING_CACHE_AFTER_WOOCOMMERCE_ORDER_STATUS_CHANGED [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/woocommerce-settings/#after-order-status-changed">Details</a>]
-
-= 0.9.1.6 =
-* to fix Notice: Undefined variable: order_arr in preload.php on line 161
-* to fix Notice: Undefined property: stdClass::$go in preload.php on line 440
-* to start using the API Token system instead of Global API for Cloudflare [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/wp-fastest-cache-cloudflare/">Details</a>]
-* to fix removing backslashes issue in the pre tag
-* to disable cache for the IP based urls on the bitnami servers
-* to disable cdn if the query string contains wc-api
-
-= 0.9.1.5 =
-* <strong>[FEATURE]</strong> to add Re-Order feture for Preload [<a target="_blank" href="https://www.wpfastestcache.com/features/re-order-preload/">Details</a>]
-
-= 0.9.1.4 =
-* to fix saving "Update Post" settings issue
-* to fix saving "New Post" settings issue
-* <strong>[FEATURE]</strong> Compatible with the AMP Takeover feature of <a target="_blank" href="https://wordpress.org/plugins/accelerated-mobile-pages/">AMP for WP – Accelerated Mobile Pages</a>
-
-= 0.9.1.3 =
-* to fix PHP Notice: Undefined offset: -1 js-utilities.php on line 84
-* to show the details of the error on the Cloudflare cdn integraiton
-
-= 0.9.1.2 =
-* to add webp extension for CDN
-* to replace the attribute which is data-bg-webp with cdn-url
-* to save the Cloudflare zone id instead of getting it via api continuously
-* to prevent calling cloudflare_clear_cache() function multiple times
-
-= 0.9.1.1 =
-* to prevent caching 403 forbidden page which is generated by iThemes Security plugin
-* to convert domain name from IDNA ASCII to Unicode for CDN
-* to minify the imported css sources
-* to round if the preload number is decimal
-
-= 0.9.1.0 =
-* to fix PHP Notice: Undefined property: stdClass::$excludekeywords in wpFastestCache.php on line 1935
-* to fix Undefined offset: 0 in cache.php on line 865
-
-= 0.9.0.9 =
-* <strong>[FEATURE]</strong> to add wizard allows you to show the clear cache button which exists on the admin toolbar based on user roles [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-link-on-the-toolbar/">Details</a>]
-* to fix the replace problem when the cdn-url starts with a number
-* to fix the little issue on the cloudflare integration
-
-= 0.9.0.8 =
-* to exclude PDF files from caching
-* to add Modified Time into htaccess
-* to add "Clear Cache of All Sites" feature for Clear Cache via URL [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-via-url/">Details</a>]
-
-= 0.9.0.7 =
-* <strong>[FEATURE]</strong> to add "exclude sources" feature for CDN
-* to remove the DNS prefetch of s.w.org when emoji is disabled
-* <strong>[FEATURE]</strong> to add wpfc_css_content filter [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/modify-minified-css-by-calling-the-function-hook/">Details</a>]
-* to fix scandir(): (errno 2): No such file or directory on js-utilities.php line 238
-
-= 0.9.0.6 =
-* <strong>[FEATURE]</strong> to add WP-CLI command for clearing minified sources [<a target="_blank" href="https://www.wpfastestcache.com/features/wp-cli-commands/">Details</a>]
-* to fix Warning: parse_url() expects parameter 1 to be string, object given in preload.php on line 458
-* <strong>[FEATURE]</strong> Compatible with <a target="_blank" href="https://wordpress.org/plugins/multiple-domain/">Multiple Domain</a>
-* <strong>[FEATURE]</strong> to add Clear Cache of All Sites button [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-of-all-sites/">Details</a>]
-
-= 0.9.0.5 =
-* to fix replacing urls on the json source with cdn url
-* to fix clearing cache on sites using Polylang plugin
-* to prevent creating cache for feed of nonexistent content
-
-= 0.9.0.4 =
-* to fix PHP Fatal error:  Call to a member function lazy_load() on null in cache.php on line 798
-* to clear sitemap cache after updating or publishing post
-* to clear cache of the static posts page
-* to replace urls on data-siteorigin-parallax attribute with cdn-url
-* to fix the problem abour "Mobile" option
-* <strong>[FEATURE]</strong> Clear cache after theme or plugin update [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-after-theme-or-plugin-update/">Details</a>]
-
-= 0.9.0.3 =
-* <strong>[FEATURE]</strong> Compatible with Multiple Domain Mapping on single site
-* <strong>[BETA FEATURE]</strong> to create cache after publishing new post or updating a post [<a target="_blank" href="https://www.wpfastestcache.com/features/automatic-cache/">Details</a>]
-* to fix clearing search (/?s=) result cache 
-* to add settings link on the plugin list
-* <strong>[FEATURE]</strong> Compatible with Polylang with one different subdomain or domain per language
-* to exclude url which ends with slash if the permalink does not end with slush
-* to exclude images for cdn if the url contains brizy_media=
-
-= 0.9.0.2 =
-* <strong>[FEATURE]</strong> to add Spanish (Argentina) language
-* to add WPFC_TOOLBAR_FOR_SHOP_MANAGER [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-link-at-the-toolbar/">Details</a>]
-* to support MultiSite
-* to add wpfc_exclude_current_page() for excluding current page [<a target="_blank" href="https://www.wpfastestcache.com/features/exclude-page/#hook">Details</a>]
-* <strong>[FEATURE]</strong> to add French language
-* <strong>[FEATURE]</strong> to add Slovak language
-* to show the solution for AWS S3 Access Denied [<a target="_blank" href="https://www.wpfastestcache.com/warnings/amazon-s3-cloudfront-access-denied-403-forbidden/">Details</a>]
-* to show the solution for Using CDN on SSL Sites [<a target="_blank" href="https://www.wpfastestcache.com/warnings/how-to-use-cdn-on-ssl-sites/">Details</a>]
-
-= 0.9.0.1 =
-* to remove the clear cache button from column and to add clear cache action on row actions [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/clear-cache-for-specific-page/">Details</a>]
-* to hide clear cache icon on toolbar for IE
-* to fix replacing cdn-url on data-product_variations attribute
-* to add WPFC_TOOLBAR_FOR_EDITOR [<a target="_blank" href="https://www.wpfastestcache.com/features/clear-cache-link-at-the-toolbar/">Details</a>]
-* <strong>[FEATURE]</strong> to add Persian language
-* <strong>[FEATURE]</strong> to add Chinese (Taiwan) language
-* <strong>[FEATURE]</strong> to add Spanish (Venezuela) language
-* refactoring of checking admin users for exclution
-* to fix E_WARNING on wpFastestCache.php line 1064
-
-= 0.9.0.0 =
-* to exclude the css source of elementor which is /elementor/css/post-[number].css to avoid increasing the size of minified sources
-* to replace urls which have data-vc-parallax-image attribute with cdn-url
-* to avoid clearing cache of feed after voting (All In One Schema.org Rich Snippets)
-* to fix clearing cache after switching url on WPML
-
-= 0.8.9.9 =
-* to fix Undefined variable: count_posts in preload.php on line 112
-* to update of Spanish translation
-* to preload the language pages (WPML)
-* to clear cache of the commend feed as well after clearing cache of a post
-
-= 0.8.9.8 =
-* to clear cache of /feed as well after clearing cache of a post
-* to fix PHP Notice: Undefined index: wpfc in timeout.php on line 132
-* to clear cache when a approved commens is updated
-* to add swf extension for cdn
-* to replace urls which have data-fullurl, data-bg, data-mobileurl and data-lazy attribute with cdn-url
-* <strong>[FEATURE]</strong> Traditional Chinese language has been added
-* to convert the icon from png to svg [by Roni Laukkarinen]
-* to fix Undefined index: HTTP_HOST cache.php on line 321
-
 EARLIER VERSIONS
 For the changelog of earlier versions, please refer to [<a target="_blank" href="https://www.wpfastestcache.com/changelog/earlier-changelog-of-freemium-version/">the changelog on wpfastestcache.com</a>]
 
@@ -390,7 +221,7 @@ For the changelog of earlier versions, please refer to [<a target="_blank" href=
 You need to refresh a page twice. If a page is cached, at the bottom of the page there is a text like "&lt;!-- WP Fastest Cache file was created in 0.330816984177 seconds, on 08-01-14 9:01:35 --&gt;".
 
 = Does it work with Nginx? =
-Yes, it works with Nginx properly. Since Nginx doesn’t use an .htaccess file, you need to enable the Gzip compression and Browser Caching features manually. You can follow these tutorials: <a href="https://www.wpfastestcache.com/tutorial/how-to-enable-leverage-browser-caching-on-nginx/">How to Enable Leverage Browser Caching on Nginx</a> and <a href="https://www.wpfastestcache.com/tutorial/how-to-enable-gzip-on-nginx/">How to Enable Gzip on Nginx</a>
+Yes, it works with Nginx properly. Since Nginx doesn’t use an .htaccess file, you need to enable the Gzip compression and Browser Caching features manually. You can follow these tutorials: <a href="https://www.wpfastestcache.com/tutorial/how-to-enable-leverage-browser-caching-on-nginx/">How to Enable Leverage Browser Caching on Nginx</a> and <a href="https://www.wpfastestcache.com/tutorial/how-to-enable-gzip-compression-in-wordpress/#nginx">How to Enable Gzip on Nginx</a>
 
 = Does it work with IIS (Windows Server) ? =
 Yes, it works with IIS properly.

@@ -1,0 +1,52 @@
+/* == PAGE IMPRESSUM */
+.impressum {
+	color: $color-dark-gray;
+
+	& strong {
+		font-size: 1.4rem;
+		color: $color-sowo;
+	}
+
+	& h2 {
+		font-size: 2.6rem;
+		line-height: 3.3rem;
+		font-weight: 300;
+		text-transform: none;
+		color: $color-sowo;
+		margin-top: 2.0rem;
+		margin-bottom: 1.0rem;
+
+		@include atMedium {
+			font-size: 2.8rem;
+			line-height: 3.5rem;
+		}
+	}
+
+	& table {
+		width: 100%;
+		margin-top: 1.0rem;
+		overflow: hidden;
+
+		@include atMedium {
+			width: calc(100% - 1.0rem);
+			margin-top: 2.0rem;
+			margin-left: 1.0rem;
+		}
+
+
+		& table td {
+			width: 100%;
+
+			@include atMedium {
+				width: initial;
+			}
+		}
+
+	}
+
+
+	& .wp-block-table.is-style-stripes {
+		overflow: hidden !important;
+	}
+
+}

@@ -1,0 +1,118 @@
+/* === PARTNER SLIDER === */
+.partner-slider {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	width: auto;
+	max-height: 180px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+
+
+
+
+	& a {
+		text-decoration: none;
+	}
+
+
+	&__container {
+		border-top: 3px solid $color-sowo;
+		border-bottom: 3px solid $color-sowo;
+
+	}
+
+
+	& .slick-list {
+		width: calc(100% - 6rem);
+
+	}
+
+
+	& .slick-track {
+		display: inline-flex;
+		min-height: 180px;
+
+	}
+
+
+	&__card {
+		position: relative;
+		height: 100% !important;
+		margin: auto;
+
+	}
+
+
+	&__link {
+		max-width: 100%;
+		width: auto;
+		max-height: 160px;
+		height: auto;
+		margin: auto;
+
+	}
+
+
+	&__logo-img {
+		min-height: 80px;
+		max-height: 110px;
+		height: auto;
+		max-width: 220px;
+		width: auto;
+		-o-object-fit: contain;
+		object-fit: contain;
+		object-position: center center;
+		margin: auto;
+	}
+
+
+	.slick-prev:before,
+	.slick-next:before {
+		font-family: 'FontAwesome Solid';
+		font-size: 3.0rem;
+		font-weight: 300;
+		line-height: 1;
+		color: $color-sowo;
+		opacity: 0.75;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+	.slick-prev {
+		left: 0px;
+	}
+
+
+	.slick-prev:before {
+		content: "\f053";
+	}
+
+
+	[dir="rtl"] .slick-prev:before {
+		content: "\f054";
+	}
+
+
+	[dir="rtl"] .slick-next {
+		left: -10px; top: 70px; right: auto;
+	}
+
+
+	.slick-next {
+		right: 0px;
+	}
+
+	.slick-next:before {
+		content: "\f054";
+	}
+
+
+	[dir="rtl"] .slick-next:before {
+		content: "\f053";
+	}
+
+}

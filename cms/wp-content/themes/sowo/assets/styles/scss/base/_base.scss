@@ -1,5 +1,4 @@
 /* == BASIC SETTINGS == */
-
 /* -- Resets -- */
 *,
 *::after,
@@ -9,96 +8,69 @@
   box-sizing: inherit;
 }
 
+
 html {
-  font-size: 62.5%; // Basis = 16px --> 1.0rem = 10px
+  font-size: 62.5%;
 }
+
 
 body {
-  color: $color-gray;
-  background-image: url('../../assets/images/backgrounds/bg_body.jpg');
+  color: $color-dark-gray;
+/*   background: url("../../images/backgrounds/bg_lion-pattern-green.png"), $color-basic-light;
   background-size: contain;
-  background-repeat: repeat-y;
+  background-repeat: repeat-y; */
 
   @include atMedium {
-    border-top-width: 12px;
+
   }
 }
+
 
 main {
-  position: relative;
   margin: 0rem;
-  padding: 1rem 1rem;
-  z-index: 0;
+  padding: 0rem 1rem;
 
   @include atMedium {
-    position: relative;
+   position: relative;
+   /* top: -115px; */
   }
 }
-
-
-ul {
-  list-style-image: url('../../assets/icons/icon_bullet-point.svg');
-  list-style-position: inside;
-  padding-left: 2.0rem;
-
-  @include atMedium {
-  }
-}
-
-
-ul li:marker {
-  padding-right: 5.0rem;
-  margin-right: 10px !important;
-  right: 10px;
-
-  @include atMedium {
-  }
-}
-
-
-ol {
-  list-style-position: inside;
-  padding-left: 2.0rem;
-
-  @include atMedium {
-  }
-}
-
-
-input[type=checkbox] {
-  accent-color: $color-primary;
-}
-
-
-input[type=radio] {
-  accent-color: $color-primary;
-}
-
-
-input[type=range] {
-  accent-color: $color-primary;
-}
-
-
-progress {
-  accent-color: $color-primary;
-}
-
-
-
-
 
 
 .site-content {
+  background-color: rgba($color-white, 0.68);
   padding: 1rem;
-
+  margin: 0rem 1rem;
 
   @include atMedium {
-    max-width: 1136px;
-    position: relative;
-    margin: 0 auto;
+   max-width: 1136px;
+   position: relative;
+   margin: 0 auto;
   }
 }
+
+
+.inner-container {
+  padding: 0 0.5rem;
+
+  @include atMedium {
+   padding: 0 4.0rem;
+  }
+}
+
+
+.site-content__intro-heading {
+  width: calc(100% + 1.0rem);
+  font-size: 2.0rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -1.0rem;
+  margin-bottom: 1.0rem;
+  padding-left: 1.0rem;
+  padding-bottom: 1.0rem;
+}
+
 
 .img--fullwidth {
   position: absolute;
@@ -120,9 +92,9 @@ progress {
   overflow: hidden;
 
   @include atMedium {
-    position: relative;
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
-    margin-right: initial;
+   position: relative;
+   width: calc(100% + 2rem);
+   margin-left: -1rem;
+   margin-right: initial;
   }
 }

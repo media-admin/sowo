@@ -1,0 +1,62 @@
+/* === PARTNER OVERVIEW === */
+.partner-overview {
+
+
+	@include atMedium {
+
+	}
+
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+
+
+		@include atMedium {
+			flex: 3;
+		}
+	}
+
+
+	&__card {
+		position: relative;
+		border: 1px solid $color-lighter-gray;
+		min-height: 235px;
+		height: auto;
+
+		@include atMedium {
+			width: 33%;
+		}
+	}
+
+
+	&__link {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		height: 100%;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__logo-img {
+		position: relative;
+		max-width: 70%;
+		width: auto;
+		max-height: 70%;
+		height: auto;
+		margin-top: 15%;
+		margin-bottom: 15%;
+
+		@include atMedium {
+
+		}
+	}
+
+}

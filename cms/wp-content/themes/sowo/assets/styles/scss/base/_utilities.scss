@@ -1,61 +1,172 @@
 /* == UTILITIES & HELPERS == */
 
-.alignfull {
-	width: calc( 100vw - 0.75rem );
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	-o-object-fit: cover;
-	object-fit: cover;
-	object-position: center center;
-	overflow: hidden;
-}
-
-
-.fullwidth {
-	width: calc( 100vw - 0.75rem );
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	-o-object-fit: cover;
-	object-fit: cover;
-	object-position: center center;
-	overflow: hidden;
-}
-
-
-.wp-block-button__link {
-	position: relative;
-	display: inline-block;
-	font-family: "Alumni Sans", sans-serif;
+.shoutout {
+	font-size: 3.6rem;
 	font-weight: 800;
-	font-size: 2.6rem;
-	line-height: 3.1rem;
-	color: $color-yellow;
-	background-color: $color-secondary;
-	border-radius: 8px;
-	border: 0px solid;
-	text-decoration: none;
+	text-transform: uppercase;
 	letter-spacing: 2px;
-	padding: 0.75rem 1.5rem;
+	margin-top: 2.5rem;
+	margin-bottom: 3.5rem;
+}
+
+
+.preparation__container {
+	padding: 1.0rem;
+}
+
+
+.preparation__container h3 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	padding: 3rem 0;
+	margin-right: -2rem;
+	margin-left: -2rem;
+}
+
+
+.bg-green {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+.bg--wild {
+	margin-top: -8rem;
+	margin-bottom: -6rem;
+}
+
+
+.wp-block-columns.has-background {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+
+.wp-container-34 {
+	margin-left: -1rem;
+	margin-right: -1rem;
+	justify-content: center !important;
+}
+
+
+body .is-layout-flex {
+	justify-content: center !important;
+}
+
+
+.fullwidth-img img {
+	max-width: calc(100% + 2rem);
+	width: calc(100% + 2rem);
+	margin-left: -1rem;
+	margin-right: -1rem;
+	overflow: hidden;
+}
+
+
+.lift-up {
+	margin-top: -1.0rem;
 }
 
 
 
-.wp-block-buttons>.wp-block-button {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+
+
+
+/* --- WordPress Helper Classes --- */
+
+/* Heading */
+.wp-block-heading {
+	line-height: 3.6rem;
+	margin-bottom: 1.0rem;
+}
+
+
+h2.wp-block-heading {
+	font-size: 2.4rem;
+	line-height: 3.0rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-top: 2.0rem;
+	margin-bottom: 1.0rem;
+
+	@include atMedium {
+		font-size: 2.4rem;
+		line-height: 3.0rem;
+		margin-bottom: 2.0rem;
+	}
 }
 
 
 
-.wp-block-media-text .wp-block-media-text__content {
-	padding: 0 3%;
+
+h3.wp-block-heading {
+	display: inline-block;
+	font-weight: 300;
+	padding-bottom: 0.15rem;
+	width: auto;
 }
 
 
 
+
+/* Blockquotes */
+.wp-block-quote {
+	margin-top: 2.0rem;
+	margin-bottom: 1.0rem;
+	padding-top: 2.8rem;
+	padding-bottom: 2.8rem;
+
+	@include atMedium {
+
+	}
+}
+
+
+.wp-block-quote p {
+	position: relative;
+	width: 95%;
+	font-size: 3.2rem;
+	line-height: 5.6rem;
+	font-weight: 300;
+	letter-spacing: 0.15rem;
+
+	@include atMedium {
+
+	}
+}
+
+
+
+/* Tables */
+.wp-block-table {
+	line-height: 3.6rem;
+	margin-bottom: 1.0rem;
+}
+
+.is-style-stripes tr:nth-of-type(odd) {
+	background-color: $color-lighter-gray;
+}
+
+thead tr th:first-child,
+tbody tr td:first-child {
+	word-break: break-all;
+
+	@include atMedium {
+		width: 40rem;
+		min-width: 40rem;
+		max-width: 40rem;
+	}
+}
+
+
+.wp-block-table td {
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+	font-weight: 300;
+
+	@include atMedium {
+		margin: 2.0rem;
+	}
+}

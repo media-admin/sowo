@@ -194,13 +194,17 @@ var Wpfc_New_Dialog = {
 	add_new_keyword_keypress: function(){
 		Wpfc_New_Dialog.clone.find(".wpfc-textbox-con .fixed-search input").keypress(function(e){
 			if(e.keyCode == 13){
-				var keyword = jQuery(e.target).val().replace(/(\s|\,)/g, "");
-				
+				let keyword = jQuery(e.target).val().replace(/(\s|\,)/g, "");
+
 				Wpfc_New_Dialog.clone.find(".wpfc-textbox-con").hide();
 				jQuery(e.target).val("");
-				jQuery('<li class="keyword-item"><a class="keyword-label">' + keyword + '</a></li>').insertBefore(Wpfc_New_Dialog.clone.find(".wpfc-add-new-keyword").closest(".keyword-item")).click(function(){
-					jQuery(this).remove();
-				});
+				
+				if(keyword.length > 0){
+					jQuery('<li class="keyword-item"><a class="keyword-label">' + keyword + '</a></li>').insertBefore(Wpfc_New_Dialog.clone.find(".wpfc-add-new-keyword").closest(".keyword-item")).click(function(){
+						jQuery(this).remove();
+					});
+				}
+				
 			}
 		});
 	},

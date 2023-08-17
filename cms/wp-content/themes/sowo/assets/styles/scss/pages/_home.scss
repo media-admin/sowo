@@ -1,0 +1,25 @@
+/* == PAGE HOME */
+.home {
+
+
+/*   & h1 {
+    text-indent: -9999px;
+    height: 0rem;
+  } */
+
+
+  & .container-half-on-desktop {
+
+    @include atMedium {
+      position: relative;
+      width: calc(50% + 3rem) !important;
+      min-height: 350px;
+      max-height: 350px;
+      height: 100%;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+}

@@ -1,0 +1,150 @@
+/* === JOBS OVERVIEW === */
+.jobs-overview {
+
+	@include atMedium {
+
+	}
+
+	&__container {
+		position: relative;
+		display: block;
+		width: 100%;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__listing {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@include atMedium {
+			flex: 3;
+			gap: 3%;
+			margin-left: -1.8rem;
+		}
+	}
+
+
+	&__listing-item {
+		position: relative;
+		width: 100%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-direction: row;
+		flex-grow: 0;
+		flex-shrink: 0;
+		justify-content: space-around;
+		align-items: flex-start;
+		text-align: left;
+		list-style: none;
+		border: 1px solid $color-sowo;
+		margin: 0.5rem;
+		margin-bottom: 3%;
+		padding: 0.0rem;
+
+		@include atMedium {
+			position: relative;
+			width: 30%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+	}
+
+
+	&__card {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__title-container {
+		position: relative;
+		width: 100%;
+		display: block;
+		background-color: $color-sowo;
+		padding: 1.5rem;
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__title {
+		font-size: 1.8rem;
+		line-height: 2.6rem;
+		font-weight: 600;
+		letter-spacing: 0.05rem;
+		color: $color-white;
+		margin-bottom: 0.25rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__summary {
+		width: 90%;
+		font-size: 1.8rem;
+		line-height: 3.6rem;
+		padding: 1.5rem;
+
+	}
+
+
+	&__summary-details {
+
+	}
+
+
+	&__link-container {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		border-top: 3px solid $color-sowo;
+		border-bottom: 3px solid $color-sowo;
+		padding: 1.5rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__link {
+		position: relative;
+		display: block;
+		font-size: 1.8rem;
+		line-height: 2.3rem;
+		font-weight: 400;
+		text-decoration: none;
+		color: $color-sowo;
+		margin-top: 1.0rem;
+		margin-bottom: 1.0rem;
+	}
+
+	&__link img {
+		position: relative;
+		width: 22px;
+		height: auto;
+		top: 3px;
+		margin-right: 0.75rem;
+	}
+
+}
