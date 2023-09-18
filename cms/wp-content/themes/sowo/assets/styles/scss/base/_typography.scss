@@ -18,11 +18,12 @@ body {
 
 
 h1 {
-  font-family: "Kulim Park", serif;
-  font-size: 4.0rem;
-  line-height: 5.0rem;
-  font-weight: 300;
+  font-family: "Kulim Park", sans-serif;
+  font-size: 6.0rem;
+  line-height: 6.8rem;
+  font-weight: 600;
   color: $color-sowo;
+  margin-bottom: 2.0rem;
 
   @include atMedium {
 
@@ -30,19 +31,37 @@ h1 {
 }
 
 
-.subheading {
-  font-size: 1.8rem;
-  margin-top: -1.5rem;
+.site-title-subheading {
+  display: block;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: $color-dark-gray;
+  margin-left: 0.5rem;
+
+  @include atMedium {
+    display: initial;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+    margin-left: initial;
+  }
 }
 
 
 h2 {
+  display: table;
+  width: auto;
   font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 2.4rem;
-  line-height: 3.0rem;
+  line-height: 3.2rem;
   text-transform: uppercase;
-  margin-top: 2.0rem;
-  margin-bottom: 1.0rem;
+  letter-spacing: 0.1rem;
+  color: $color-white;
+  background-color: $color-sowo;
+  margin-top: 4.0rem;
+  margin-bottom: 2.0rem;
+  padding: 0.25rem 0.75rem;
 
   @include atMedium {
     font-size: 2.4rem;
@@ -52,13 +71,16 @@ h2 {
 
 
 h3 {
-  font-size: 2.8rem;
+  display: inline-block;
+  width: auto;
   font-family: "Sofia Sans Condensed", sans-serif;
-  font-weight: 400;
-  line-height: 3.3rem;
-  text-transform: uppercase;
+  font-size: 2.0rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  border-bottom: 2px solid $color-sowo;
   margin-top: 2.0rem;
-  margin-bottom: 1.0rem;
+  margin-bottom: 2.0rem;
+  padding-bottom: -0.5rem;
 }
 
 
@@ -115,6 +137,7 @@ a {
 
 
 .site-main ul {
+  list-style-type: square;
   padding-left: 3.0rem;
 }
 

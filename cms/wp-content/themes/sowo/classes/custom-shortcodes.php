@@ -1,30 +1,177 @@
 <?php
 
-function shortcode_team_members() {
+function shortcode_posts_overview_aktuelles() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_team-members');
+	get_template_part( 'shortcodes/shortcode_posts-overview-aktuelles');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_team_members', 'shortcode_team_members' );
+add_shortcode( 'shortcode_posts_overview_aktuelles', 'shortcode_posts_overview_aktuelles' );
 
 
-function shortcode_news_posts() {
+function shortcode_posts_overview_events() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_posts-news');
+	get_template_part( 'shortcodes/shortcode_posts-overview-events');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_news_posts', 'shortcode_news_posts' );
+add_shortcode( 'shortcode_posts_overview_events', 'shortcode_posts_overview_events' );
 
 
-function shortcode_partner_overview() {
+function shortcode_posts_overview_projekte() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_partner-overview');
+	get_template_part( 'shortcodes/shortcode_posts-overview-projekte');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_partner_overview', 'shortcode_partner_overview' );
+add_shortcode( 'shortcode_posts_overview_projekte', 'shortcode_posts_overview_projekte' );
+
+
+
+
+
+function shortcode_press_releases_overview() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_press-releases-overview');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_press_releases_overview', 'shortcode_press_releases_overview' );
+
+
+function shortcode_team_members_beve() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_team-members-beve');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_team_members_beve', 'shortcode_team_members_beve' );
+
+
+function shortcode_team_members_bw() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_team-members-bw');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_team_members_bw', 'shortcode_team_members_bw' );
+
+
+function shortcode_team_members_org() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_team-members-org');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_team_members_org', 'shortcode_team_members_org' );
+
+
+function shortcode_team_members_punk() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_team-members-punk');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_team_members_punk', 'shortcode_team_members_punk' );
+
+
+function shortcode_team_members_wg() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_team-members-wg');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_team_members_wg', 'shortcode_team_members_wg' );
+
+
+
+function shortcode_annual_reports() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_annual-reports');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_annual_reports', 'shortcode_annual_reports' );
+
+
+function shortcode_contact_person_beve() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_contact-person-beve');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_contact_person_beve', 'shortcode_contact_person_beve' );
+
+
+function shortcode_contact_person_bw() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_contact-person-bw');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_contact_person_bw', 'shortcode_contact_person_bw' );
+
+
+
+function shortcode_contact_person_punk() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_contact-person-punk');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_contact_person_punk', 'shortcode_contact_person_punk' );
+
+
+
+function shortcode_contact_person_wg() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_contact-person-wg');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_contact_person_wg', 'shortcode_contact_person_wg' );
+
+
+
+
+
+function shortcode_sponsors_overview() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_sponsors-overview');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_sponsors_overview', 'shortcode_sponsors_overview' );
+
+
+
+function shortcode_partner_overview_presse() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_partner-overview-presse');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_partner_overview_presse', 'shortcode_partner_overview_presse' );
+
+
+function shortcode_partner_overview_allgemein() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_partner-overview-allgemein');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_partner_overview_allgemein', 'shortcode_partner_overview_allgemein' );
+
+
+function shortcode_partner_overview_sozialbereich() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_partner-overview-sozialbereich');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_partner_overview_sozialbereich', 'shortcode_partner_overview_sozialbereich' );
+
+
 
 
 function shortcode_partner_slider() {
@@ -36,40 +183,50 @@ function shortcode_partner_slider() {
 add_shortcode( 'shortcode_partner_slider', 'shortcode_partner_slider' );
 
 
-function shortcode_jobs_overview() {
+function shortcode_jobs() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_jobs-overview');
+	get_template_part( 'shortcodes/shortcode_jobs');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_jobs_overview', 'shortcode_jobs_overview' );
+add_shortcode( 'shortcode_jobs', 'shortcode_jobs' );
 
 
-function shortcode_jobs_overview_1_3() {
+
+function shortcode_google_maps_beve() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_jobs-overview-1-3');
+	get_template_part( 'shortcodes/shortcode_google-maps-beve');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_jobs_overview_1_3', 'shortcode_jobs_overview_1_3' );
+add_shortcode( 'shortcode_google_maps_beve', 'shortcode_google_maps_beve' );
 
 
-function shortcode_jobs_overview_4_plus() {
+function shortcode_google_maps_bw() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_jobs-overview-4-plus');
+	get_template_part( 'shortcodes/shortcode_google-maps-bw');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_jobs_overview_4_plus', 'shortcode_jobs_overview_4_plus' );
+add_shortcode( 'shortcode_google_maps_bw', 'shortcode_google_maps_bw' );
 
 
-function shortcode_google_maps() {
+function shortcode_google_maps_org() {
 	ob_start();
-	get_template_part( 'shortcodes/shortcode_google-maps');
+	get_template_part( 'shortcodes/shortcode_google-maps-org');
 	return ob_get_clean();
 }
 
-add_shortcode( 'shortcode_google_maps', 'shortcode_google_maps' );
+add_shortcode( 'shortcode_google_maps_org', 'shortcode_google_maps_org' );
+
+
+function shortcode_google_maps_wg() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_google-maps-wg');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_google_maps_wg', 'shortcode_google_maps_wg' );
 
 
 function shortcode_youtube_video() {

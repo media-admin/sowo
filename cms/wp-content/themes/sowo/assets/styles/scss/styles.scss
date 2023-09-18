@@ -16,18 +16,32 @@
 @import "components/accordion";
 @import "components/slick";
 @import "components/slick-theme";
+@import "components/posts-overview";
+@import "components/events-overview";
+@import "components/press-releases-overview";
 @import "components/team-members";
+@import "components/contact-person";
+@import "components/annual-reports";
+@import "components/sponsors-overview";
 @import "components/partner-overview";
 @import "components/partner-slider";
 @import "components/jobs-overview";
+@import "components/jobs";
+@import "components/google-map";
 @import "components/button-back-to-top";
 
 /* layout */
-@import "layout/site-header-top";
+@import "layout/contact-sidebar";
 @import "layout/site-header";
 @import "layout/navigation";
 @import "layout/large-hero";
-@import "layout/contact-navbar";
+
+@import "layout/single-post";
+@import "layout/single-press-release";
+@import "layout/page-style-wg";
+@import "layout/page-style-bw";
+@import "layout/page-style-beve";
+@import "layout/page-style-punk";
 @import "layout/site-footer";
 
 /* pages */

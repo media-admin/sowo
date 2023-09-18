@@ -273,10 +273,12 @@ function prefix_disable_gutenberg($current_status, $post_type) {
 			return false;
 	} elseif ($post_type == 'partner' ) {
 			return false;
+	} elseif ($post_type == 'sponsor' ) {
+			return false;
 	} elseif ($post_type == 'reference' ) {
 			return false;
-/* 	} elseif ($post_type == 'job' ) {
-			return false; */
+	} elseif ($post_type == 'annual-report' ) {
+			return false;
 	} elseif ($post_type == 'contact-detail' ) {
 			return false;
 	}

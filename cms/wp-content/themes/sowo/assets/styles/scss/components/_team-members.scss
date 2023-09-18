@@ -1,6 +1,7 @@
 /* === TEAM MEMBERS === */
 .team-members {
-
+	position: relative;
+	width: 100%;
 
 	@include atMedium {
 
@@ -23,12 +24,15 @@
 		display: flex;
 		flex: 1;
 		flex-wrap: wrap;
-		justify-content: center;
+		row-gap: 2rem;
+		justify-content: flex-start;
+		padding-left: 0px !important;
+		padding-right: 1.0rem;
 
 		@include atMedium {
-			flex: 3;
-			gap: 3%;
-			margin-left: -1.8rem;
+			flex: 2;
+			gap: 2%;
+			margin-left: initial;
 		}
 	}
 
@@ -45,14 +49,13 @@
 		align-items: flex-start;
 		text-align: left;
 		list-style: none;
-		border: 1px solid $color-sowo;
 		margin: 0.5rem;
 		margin-bottom: 3%;
 		padding: 0.0rem;
 
 		@include atMedium {
 			position: relative;
-			width: 30%;
+			width: 48%;
 			flex-grow: 0;
 			flex-shrink: 0;
 		}
@@ -61,12 +64,17 @@
 
 	&__card {
 		position: relative;
-		display: block;
 		width: 100%;
 		height: 100%;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 2%;
 
 		@include atMedium {
-
+			flex: 2;
+			flex-direction: row;
+			gap: 2%;
 		}
 	}
 
@@ -74,9 +82,13 @@
 	&__img {
 		width: 100%;
 		height: auto;
+		-o-object-fit: cover;
+		object-fit: cover;
+		object-position: center center;
 
 		@include atMedium {
-
+			width: 30%;
+			height: auto;
 		}
 	}
 
@@ -84,122 +96,77 @@
 	&__person {
 		position: relative;
 		width: 100%;
-		display: block;
-		padding: 1.0rem;
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: "Sofia Sans Condensed", sans-serif;
+		font-size: 2.0rem;
+		line-height: 2.4rem;
+		color: $color-white;
+		background-color: rgba($color-sowo,0.75);
+		padding: 2.0rem 1.5rem;
 
 		@include atMedium {
 
 		}
+	}
+
+
+	&__person p {
+		color: $color-white;
+	}
+
+
+	&__person a {
+		color: $color-white;
 	}
 
 
 	&__name {
-		font-size: 1.8rem;
-		line-height: 2.6rem;
+		font-family: "Gemunu Libre", sans-serif;
+		font-size: 2.6rem;
+		line-height: 2.8rem;
 		font-weight: 600;
-		letter-spacing: 0.05rem;
-		color: $color-sowo;
-		margin-bottom: 0.25rem;
-
-		@include atMedium {
-
-		}
-	}
-
-
-	&__jobtitle {
-		font-size: 1.4rem;
-		line-height: 2.4rem;
-		font-weight: 300;
-		letter-spacing: 0.1rem;
-
-		@include atMedium {
-
-		}
-	}
-
-
-	&__contact {
-		position: relative;
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		border-top: 3px solid $color-sowo;
-		border-bottom: 3px solid $color-sowo;
-		padding: 1.0rem;
-
-		@include atMedium {
-
-		}
-	}
-
-
-
-	&__contact-data {
-
-
-		@include atMedium {
-
-		}
-	}
-
-
-	&__contact-data a {
-		position: relative;
-		display: block;
-		font-weight: 300;
-		color: $color-dark-gray;
-		text-decoration: none;
-
-		@include atMedium {
-
-		}
-	}
-
-
-	&__phone {
-		display: block;
-		font-size: 1.8rem;
-		line-height: 2.3rem;
-		margin-top: 1.0rem;
 		margin-bottom: 1.0rem;
+
+		@include atMedium {
+			font-size: 2.8rem;
+			line-height: 3.1rem;
+		}
 	}
 
 
-	&__mail {
-		display: block;
-		font-size: 1.8rem;
-		line-height: 2.3rem;
+	&__role {
+		font-size: 2.0rem;
+		line-height: 2.5rem;
+		font-weight: 400;
+		font-style: italic;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		margin-bottom: 1.0rem;
+
+		@include atMedium {
+			font-size: 2.2rem;
+			line-height: 2.7rem;
+		}
 	}
 
 
-	&__social-media {
-		display: flex;
-		flex-direction: column;
-		font-size: 1.8rem;
-		line-height: 2.3rem;
-		margin-top: 1rem;
+	&__education {
+		margin-bottom: 1.0rem;
 
+		@include atMedium {
+
+		}
 	}
 
 
+	&__motto {
+		margin-bottom: 0.0rem;
 
-	&__linkedin {
-		display: block;
-		font-size: 1.8rem;
-		line-height: 2.3rem;
-		margin-top: 1rem;
-		margin-top: 1.0rem;
-	}
+		@include atMedium {
 
-
-	&__xing {
-		display: block;
-		font-size: 1.8rem;
-		line-height: 2.3rem;
-		margin-top: 1rem;
+		}
 	}
 
 }

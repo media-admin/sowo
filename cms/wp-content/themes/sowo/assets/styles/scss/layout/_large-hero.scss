@@ -1,23 +1,23 @@
 /* == LARGE HERO */
 .large-hero {
   position: relative;
-  top: -105px;
+  /* top: -105px; */
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: $color-white;
   margin: 0;
   overflow: hidden;
   z-index: -1;
 
   @include atMedium {
-    /* max-width: 1136px; */
+    top: initial;
+    max-width: 1136px;
     width: 100%;
-    position: relative;
-    /* min-height: 478px;
-    max-height: 478px; */
+    min-height: 400px;
     height: auto;
-    /*     top: -105px; */
+    border-left: 1px solid $color-lighter-gray;
+    border-right: 1px solid $color-lighter-gray;
     margin: 0 auto;
-    overflow: hidden;
   }
 }
 
@@ -26,12 +26,20 @@
   position: relative;
   display: block;
   width: 100%;
+  min-height: 215px;
   height: auto;
-  height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
   object-position: center center;
   z-index: -1;
+
+  @include atMedium {
+    height: auto;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
 }
 
 

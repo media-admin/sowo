@@ -1,0 +1,59 @@
+/* === PAGE STYLE BeVe === */
+.beve {
+
+	& h1 {
+		color: $color-beve;
+	}
+
+
+	& h2.wp-block-heading {
+		background-color: $color-beve;
+	}
+
+
+	h3.wp-block-heading {
+		border-bottom-color: $color-beve;
+	}
+
+
+	#contact-sidebar section {
+		background-color: $color-beve;
+	}
+
+
+	& .team-members__person  {
+		background-color: rgba($color-beve,0.75);
+	}
+
+
+	& .contact-person__person  {
+		background-color: rgba($color-beve,0.75);
+	}
+
+
+	& .wp-block-quote p:before {
+		color: $color-beve;
+	}
+
+
+	& .wp-block-quote p:after {
+		color: $color-beve;
+	}
+
+
+	& .google-map .btn  {
+		background-color: $color-beve;
+	}
+
+
+	& .google-map .btn:hover  {
+		color: $color-beve !important;
+		background-color: $color-white;
+	}
+
+
+	& .contact-link a {
+		color: $color-beve !important;
+	}
+
+}

@@ -1,109 +1,106 @@
 <footer class="site-footer">
-			<div class="site-footer__row outer-wrapper">
+	<div class="site-footer__row outer-wrapper">
 
-				<div class="site-footer-navbar">
-						<ul class="site-footer-navbar__navigation-list">
-								<?php
-									wp_nav_menu(array(
-										'walker'	=> new FooterMenuNavwalker(),
-										'menu' => 'Footernavigation',
-										'theme_location' => 'nav-menu-footer',
-										'depth'          => 1,
-										'container'      => FALSE,
-										'container_class'   => '',
-										'menu_class'     => '',
-										'items_wrap'     => '%3$s',
-										'fallback_cb' => false
-									));
-								?>
-						</ul>
-					</div>
+		<div class="site-footer__contact-information">
 
-					<div class="site-footer__additional-data">
-						<nav class="site-footer__navigation">
-							<ul class="site-footer__navigation-list">
-								<?php
-									wp_nav_menu(array(
-										'walker'	=> new FooterNavwalker(),
-										'menu' => 'Footermenü',
-										'theme_location' => 'footer-navigation',
-										'depth'          => 1,
-										'container'      => FALSE,
-										'container_class'   => '',
-										'menu_class'     => '',
-										'items_wrap'     => '%3$s',
-										'fallback_cb' => false
-									));
-								?>
-							</ul>
-						</nav>
-					</div>
+			<div class="site-footer__contact-information-container">
 
+				<div class="site-footer__contact-information-logo">
+					<a class="site-footer__contact-information-logo-link" href="<?php echo get_home_url(); ?>">
+						<img
+							class="site-footer__contact-information-logo-img"
+							src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/images/header-logo_sowo.svg"
+							alt="Logo SoWo - Soziales Wohnhaus Neunkirchen"
+						/>
+					</a>
 				</div>
 
-
-				<section class="site-footer__contact-information">
-					<div class="site-footer__contact-information-container outer-wrapper">
-						<div class="site-footer__contact-information-logos inner-container">
-							<div class="site-footer__contact-information-logo">
-								<a class="" href="<?php echo get_home_url(); ?>">
-									<img
-										class="site-footer__contact-information-logo-img"
-										src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/logos/footer-logo_epicon.svg"
-										alt="Logo EPICON Engineering GmbH"
-									/>
-								</a>
-							</div>
-							<div class="site-footer__contact-information-logo-extensions">
-								<img
-									class="site-footer__contact-information-logo-extension-img"
-									src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/logos/logo_certified-engineering-office.svg"
-									alt="Logo Staatlich geprüftes Ingenierubüro"
-								/>
-							</div>
-							<div class="site-footer__contact-information-logo-extensions">
-								<img
-									class="site-footer__contact-information-logo-extension-img"
-									src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/logos/logo_tuev-sued-ISO-9001.svg"
-									alt="Logo TÜV SÜD ISO 9001"
-								/>
-							</div>
-						</div>
-
-						<div class="site-footer__contact-information-block">
-							<div class="site-footer__contact-information-phone">
-								<a class="site-footer__contact-information-phone-number" href="tel:+43266240060">
-									+43 2662 40060
-								</a>
-							</div>
-							<div class="site-footer__contact-information-email">
-								<a class="site-footer__contact-information-email-address" href="mail:info@epicon.pro">
-									info@epicon.pro
-								</a>
-							</div>
-							<div class="site-footer__contact-information-address">
-								Energiestraße 2<br/>
-								2540 Bad Vöslau
-							</div>
-						</div>
-
-						<div class="site-footer__contact-information-member-of">
-							<img
-								class="site-footer__contact-information-member-of-img"
-								src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/logos/logo_member-of-engineering-office.svg"
-								alt="Logoleiste Mitglied des Fachverbands Ingenierubüros"
-							/>
-						</div>
+				<div class="site-footer__contact-information-data">
+					<div class="site-footer__contact-information-address">
+						<strong>Soziales Wohnhaus Neunkirchen</strong><br/>
+						Alleegasse 2a<br/>
+						2620 Neunkirchen
 					</div>
-				</section>
 
+					<div class="site-footer__contact-information-phone">
+						<a class="site-footer__contact-information-phone-link" href="tel:+43263512345">
+							02635/12345
+						</a>
+					</div>
 
+					<div class="site-footer__contact-information-email">
+						<a class="site-footer__contact-information-email-link" href="mail:office@sowo.at">
+							office@sowo.at
+						</a>
+					</div>
 
+					<div class="site-footer__contact-information-facebook">
+						<a class="site-footer__contact-information-facebook-link" href="facebook.com/sowo" target="_blank">
+							facebook.com/sowo
+						</a>
+					</div>
+				</div>
 
-			<div class="site-footer__copyright">
-				©&nbsp;Copyright&nbsp;2023 - EPICON Engineering GmbH
 			</div>
-		</footer>
+
+			<div class="site-footer__footer-navigation">
+				<nav class="site-footer__footer-navigation-menu">
+					<ul class="site-footer__footer-navigation-menu-list">
+						<?php
+							wp_nav_menu(array(
+								'walker'	=> new FooterNavwalker(),
+								'menu' => 'Footermenü',
+								'theme_location' => 'footer-navigation',
+								'depth'          => 1,
+								'container'      => FALSE,
+								'container_class'   => '',
+								'menu_class'     => '',
+								'items_wrap'     => '%3$s',
+								'fallback_cb' => false
+							));
+						?>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+
+
+		<div class="site-footer__navbar-container">
+
+			<div class="site-footer-navbar">
+				<ul class="site-footer-navbar__navigation-list">
+					<?php
+						wp_nav_menu(array(
+							'walker'	=> new FooterMenuNavwalker(),
+							'menu' => 'Footernavigation',
+							'theme_location' => 'nav-menu-footer',
+							'depth'          => 2,
+							'container'      => FALSE,
+							'container_class'   => '',
+							'menu_class'     => '',
+							'items_wrap'     => '%3$s',
+							'fallback_cb' => false
+						));
+					?>
+				</ul>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+	<div class="site-footer__copyright site-footer__row">
+		<div class="site-footer__copyright-container">
+			©&nbsp;Copyright&nbsp;2023 - Soziales Wohnhaus Neunkirchen
+		</div>
+	</div>
+
+</footer>
 
 		<?php wp_footer();?>
 

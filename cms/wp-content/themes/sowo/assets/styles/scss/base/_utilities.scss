@@ -70,7 +70,14 @@ body .is-layout-flex {
 }
 
 
+.has-text-left {
+	text-align: left;
+}
 
+
+.has-text-right {
+	text-align: right;
+}
 
 
 
@@ -84,28 +91,43 @@ body .is-layout-flex {
 
 
 h2.wp-block-heading {
+	display: table;
+	width: auto;
+	font-family: "Sofia Sans Condensed", sans-serif;
 	font-size: 2.4rem;
-	line-height: 3.0rem;
-	font-weight: 300;
+	line-height: 3.2rem;
 	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	color: $color-white;
+	background-color: $color-sowo;
 	margin-top: 2.0rem;
-	margin-bottom: 1.0rem;
+	margin-bottom: 2.0rem;
+	padding: 0.25rem 0.75rem;
 
 	@include atMedium {
 		font-size: 2.4rem;
 		line-height: 3.0rem;
-		margin-bottom: 2.0rem;
+		margin-top: 4.0rem;
 	}
 }
 
 
 
 
+
+
+
 h3.wp-block-heading {
 	display: inline-block;
-	font-weight: 300;
-	padding-bottom: 0.15rem;
 	width: auto;
+	font-family: "Sofia Sans Condensed", sans-serif;
+	font-size: 2.0rem;
+	line-height: 2.2rem;
+	font-weight: 600;
+	border-bottom: 2px solid $color-sowo;
+	margin-top: 2.0rem;
+	margin-bottom: 2.0rem;
+	padding-bottom: -0.5rem;
 }
 
 
@@ -126,14 +148,52 @@ h3.wp-block-heading {
 
 .wp-block-quote p {
 	position: relative;
-	width: 95%;
-	font-size: 3.2rem;
-	line-height: 5.6rem;
-	font-weight: 300;
-	letter-spacing: 0.15rem;
+	width: 85%;
+	font-family: 'Gemunu Libre', sans-serif;
+	font-size: 2.4rem;
+	line-height: 3.8rem;
+	font-weight: 400;
+	margin-left: 2.8rem;
 
 	@include atMedium {
+		font-size: 3.4rem;
+		line-height: 4.8rem;
+		margin-left: 3.5rem;
+	}
+}
 
+
+.wp-block-quote p:before {
+	display: inline-block;
+	content: '„';
+	font-size: 5.0rem;
+	font-weight: 300;
+	margin-left: -2.8rem;
+	margin-right: 1.3rem;
+
+	@include atMedium {
+		font-size: 7.0rem;
+		margin-left: -3.0rem;
+		margin-right: 0.5rem;
+	}
+}
+
+
+.wp-block-quote p:after {
+	position: relative;
+	display: inline-block;
+	width: auto;
+	content: '“';
+	font-size: 5.0rem;
+	font-weight: 300;
+	line-height: 1.0rem;
+	top: 1.2rem;
+
+	@include atMedium {
+		font-size: 7.0rem;
+		font-weight: 300;
+		line-height: 1.0rem;
+		top: 1.2rem;
 	}
 }
 
@@ -168,5 +228,24 @@ tbody tr td:first-child {
 
 	@include atMedium {
 		margin: 2.0rem;
+	}
+}
+
+
+.bg-color-sowo {
+	background-color: $color-sowo;
+	padding: 1.5rem;
+
+	@include atMedium {
+		margin-top: 4.5rem !important;
+	}
+}
+
+
+.bg-color-sowo p {
+	color: $color-white !important;
+
+	@include atMedium {
+
 	}
 }

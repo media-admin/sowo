@@ -13,7 +13,7 @@
 		flex: 1;
 		flex-wrap: wrap;
 		justify-content: center;
-
+		gap: 3%;
 
 		@include atMedium {
 			flex: 3;
@@ -23,21 +23,25 @@
 
 	&__card {
 		position: relative;
-		border: 1px solid $color-lighter-gray;
-		min-height: 235px;
+		width: 100%;
+		min-height: 200px;
 		height: auto;
+		border: 1px solid $color-light-gray;
+		margin-top: 3%;
 
 		@include atMedium {
-			width: 33%;
+			width: 30%;
 		}
 	}
 
 
 	&__link {
 		position: relative;
+		min-height: 200px;
+		height: 100%;
 		display: flex;
 		justify-content: center;
-		height: 100%;
+		align-items: center;
 
 		@include atMedium {
 
@@ -49,14 +53,13 @@
 		position: relative;
 		max-width: 70%;
 		width: auto;
-		max-height: 70%;
+		max-height: 140px;
 		height: auto;
-		margin-top: 15%;
-		margin-bottom: 15%;
+		margin-top: 25%;
+		margin-bottom: 25%;
 
 		@include atMedium {
 
 		}
 	}
-
 }

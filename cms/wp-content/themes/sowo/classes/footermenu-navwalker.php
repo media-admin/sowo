@@ -1,7 +1,7 @@
 <?php
 
 /************
- * Macoffice_NavWalker
+ *SoWo Walker for site-footer-navbar
  * Author: Markus Tritremmel
  * Author URL: https://www.media-lab.at/
  * Original Author: Enrique Chavez (GiottoPress)
@@ -31,7 +31,7 @@
 
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
       $indent = str_repeat( "\t", $depth );
-        $output .= $indent."<ul class=\"navbar-item__submenu";
+        $output .= $indent."<ul class=\"site-footer__navbar-item--submenu";
         if( in_array( 'is-right', $this->right_class ) ){
             $output .= " is-right ";
           }
@@ -115,7 +115,7 @@
                     }
               }
               else{
-                $item_output .= '<li class="navbar-item"><a' . $class_names . $attributes . '>';//item empty use defaults
+                $item_output .= '<li class="site-footer__navbar-item"><a' . $class_names . $attributes . '>';//item empty use defaults
               }
             $link_title = $show_title ? apply_filters( 'the_title', $item->title, $item->ID ) : '';
             $item_output .= $args['link_before'] . trim($link_title). $args['link_after'];
@@ -129,7 +129,7 @@
 
       else {//if does have children
         $item_output = $args['before'];//stat outputting
-        $item_output .= $indent . '<li class="navbar-item navbar-item--submenu-button has-dropdown is-hoverable" data-target="dropdown"><!-- START DROPDOWN-->' . "\n";
+        $item_output .= $indent . '<li class="site-footer__navbar-item site-footer__navbar-item--submenu-button has-dropdown is-hoverable" data-target="dropdown"><!-- START DROPDOWN-->' . "\n";
           if ( ! empty( $fa ) ) {//if fa  is not empty
             $item_output .= '<a' . $class_names . $attributes . '><i class="' . $fa . '"></i>';
 
@@ -196,7 +196,7 @@
     private function get_item_classes( $item, $args ) {
       $classes     = empty( $item->classes ) ? array() : (array) $item->classes;
       $classes[]   = 'menu-item-' . $item->ID;
-      $classes[]   = 'navbar-item';
+      $classes[]   = 'site-footer__navbar-item';
       $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
       if ( $args['has_children'] ) {
         $class_names .= ' dropdown';
@@ -263,7 +263,7 @@
           echo ' class="' . esc_attr( $menu_class ) . '"';
         }
         echo '>';
-        echo '<a class="navbar-item" href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', 'worldoweb' ) . '</a>';
+        echo '<a class="site-footer__navbar-item" href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', 'worldoweb' ) . '</a>';
         echo '</div>';
         if ( $container ) {
           echo '</' . esc_attr( $container ) . '>';

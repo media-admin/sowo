@@ -1,0 +1,163 @@
+/* == CONTACT SIDEBAR == */
+
+#contact-sidebar {
+	position: fixed;
+	right: 2%;
+	bottom: 0;
+	left: 2%;
+	width: 98%;
+	height: auto;
+	z-index: 1;
+	margin: 0 auto;
+
+	@include atMedium {
+		position: fixed;
+		top: 25%;
+		right: 0;
+		bottom: initial;
+		left: initial;
+		width: 5.0rem;
+		margin: initial;
+	}
+
+
+	& a {
+		text-decoration: none;
+	}
+
+
+	& section {
+		width: 31%;
+		height: auto;
+		display: inline-flex;
+		justify-content: center;
+		background-color: $color-sowo;
+		margin-right: 0.5%;
+		margin-left: 0.5%;
+
+		@include atMedium {
+			display: block;
+			width: 5.0rem;
+			height: 5.5rem;
+			margin-bottom: 1.5rem;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+
+	}
+
+
+	& img {
+		position: relative;
+		max-width: 75%;
+		width: fit-content;
+		height: 5.5rem;
+		margin: auto;
+		padding-left: 1.25rem;
+		padding-top: 1.0rem;
+		padding-bottom: 0.5rem;
+
+		@include atMedium {
+			width: 75%;
+			padding-top: initial;
+			padding-bottom: initial;
+		}
+	}
+
+
+	&__phone {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__phone-link {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar_phone-icon {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__email {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__email-link {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__email-icon {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__location {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__location-link {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__location-icon {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__facebook {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__facebook-link {
+
+		@include atMedium {
+
+		}
+	}
+
+
+	& .contact-sidebar__facebook-icon {
+
+		@include atMedium {
+
+		}
+	}
+
+}

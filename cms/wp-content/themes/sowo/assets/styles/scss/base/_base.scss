@@ -11,11 +11,13 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 
 body {
   color: $color-dark-gray;
+  background-color: $color-light-gray;
 /*   background: url("../../images/backgrounds/bg_lion-pattern-green.png"), $color-basic-light;
   background-size: contain;
   background-repeat: repeat-y; */
@@ -38,13 +40,15 @@ main {
 
 
 .site-content {
-  background-color: rgba($color-white, 0.68);
+  background-color: $color-white;
   padding: 1rem;
   margin: 0rem 1rem;
 
   @include atMedium {
    max-width: 1136px;
    position: relative;
+   border-left: 1px solid $color-lighter-gray;
+   border-right: 1px solid $color-lighter-gray;
    margin: 0 auto;
   }
 }
@@ -55,6 +59,7 @@ main {
 
   @include atMedium {
    padding: 0 4.0rem;
+   padding-bottom: 0.0rem !important;
   }
 }
 

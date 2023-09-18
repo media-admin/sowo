@@ -1,6 +1,5 @@
 /* == SITE FOOTER == */
 .site-footer {
-  background: $color-lighter-gray;
   padding-top: 5.0rem;
   padding-bottom: 0.0rem;
 
@@ -8,7 +7,7 @@
     position: relative;
     width: 100%;
     display: inline-block;
-    padding-top: 1.0rem;
+    padding-top: 0.0rem;
   }
 }
 
@@ -16,94 +15,43 @@
 .site-footer__row {
   position: relative;
   width: 100%;
+  background-color: $color-white;
 
   @include atMedium {
     max-width: 1136px;
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: stretch;
+    border-left: 1px solid $color-lighter-gray;
+    border-right: 1px solid $color-lighter-gray;
     margin: auto;
     padding-top: 3.5rem;
+    padding-right: 1.0rem;
     padding-bottom: 1.0rem;
+    padding-left: 1.0rem;
   }
 }
 
 
 .site-footer a {
-  color: $color-sowo;
   font-weight: 600;
   text-decoration: none;
 }
 
 
-.site-footer-navbar {
 
-  @include atMedium {
-    width: 80%;
-  }
-}
-
-
-.site-footer__additional-data {
-
-  @include atMedium {
-    width: 30%;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-end;
-  }
-}
-
-
-
-.site-footer-navbar__navigation-list {
-  text-align: left;
-  margin-left: 3.5rem;
-
-  @include atMedium {
-    display: flex;
-    flex: 3;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-    margin-left: 2.0rem;
-  }
-}
-
-
-.site-footer-navbar__navigation-list .navbar-item {
-  line-height: 3.4rem;
-  margin-bottom: 3.0rem;
-
-  @include atMedium {
-    width: 30%;
-    line-height: initial;
-  }
-}
-
-
-.site-footer-navbar__navigation-list .navbar-item a {
-  font-family: "Lexend", sans-serif;
-  font-size: 2.0rem;
-  line-height: 2.5rem;
-  color: $color-dark-gray;
-  font-weight: 400;
-  text-transform: none;
-
-  @include atMedium {
-
-  }
-}
 
 
 .site-footer__navigation {
   padding-top: 4rem;
+  padding-right: 2.0rem;
+  padding-left: 2.0rem;
 
   @include atMedium {
     padding-top: 0rem;
+    padding-right: initial;
+    padding-left: initial;
   }
 }
 
@@ -123,259 +71,615 @@
 }
 
 
-.site-footer__main-navigation-list-item {
-  margin-bottom: 3.0rem;
-}
-
-
-.site-footer__main-navigation-list-item:last-child {
-
-  @include atMedium {
-    margin-bottom: 0.0rem;
-  }
-}
-
-
-.site-footer__main-navigation-list-item a {
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 2.0rem;
-  line-height: 2.5rem;
-  color: $color-sowo;
-}
-
-
-
-
-
-
-
 
 
 
 .site-footer__contact-information {
+  position: relative;
   width: 100%;
   display: block;
   font-family: "Sofia Sans Condensed", sans-serif;
   text-align: left;
-  color: $color-sowo;
-  background-color: $color-white;
-  border-top: 3px solid $color-sowo;
   margin: 0rem auto;
   padding-top: 4.0rem;
+  padding-right: 2.0rem;
   padding-bottom: 4.0rem;
+  padding-left: 2.0rem;
 
   @include atMedium {
-    width: initial;
-    justify-content: initial;
+    position: relative;
+    width: 25%;
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    gap: 0.0rem;
+    justify-content: space-between;
+    margin: initial;
+    padding-top: 0.0rem;
+    padding-bottom: 0.0rem;
   }
 }
 
 
 .site-footer__contact-information-container {
-
-
-
+  position: relative;
+  display: block;
+  width: 100%;
 
   @include atMedium {
-
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
     gap: 0.75rem;
-    padding-left: 2.0rem;
-
     gap: 0.0rem;
-  }
-}
-
-
-.site-footer__contact-information-logos {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding-left: 2.0rem;
-
-  @include atMedium {
-    width: 25%;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
   }
 }
 
 
 .site-footer__contact-information-logo {
-  width: 60%;
+  position: relative;
+  display: block;
+  width: 100%;
+  align-items: left;
+  gap: 0.75rem;
+  padding-left: 2.0rem;
 
+  @include atMedium {
+    padding-left: 0.0rem;
+  }
+}
+
+
+.site-footer__contact-information-logo {
+  width: auto;
+  height: auto;
+
+  @include atMedium {
+   width: 100%;
+   height: auto;
+  }
 }
 
 
 .site-footer__contact-information-logo-img {
-  width: 100%;
+  width: auto;
   height: auto;
+
+  @include atMedium {
+   width: 100%;
+   height: auto;
+  }
 }
 
 
-.site-footer__contact-information-logo-extension {
-  width: 20%;
-}
-
-
-.site-footer__contact-information-logo-extension-img {
+.site-footer__contact-information-data {
+  position: relative;
+  display: block;
   width: 100%;
-  height: auto;
-}
-
-
-
-
-
-.site-footer__contact-information-block {
   font-weight: 300;
-  font-size: 2.4rem;
-  line-height: 3.7rem;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
   margin-top: 4.0rem;
   margin-bottom: 4.0rem;
   margin-left: 2.0rem;
 
   @include atMedium {
-    width: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin-top: 0.0rem;
-    margin-bottom: 0.0rem;
-  }
-}
-
-
-.site-footer__contact-information-block a {
-  font-size: 2.4rem;
-  font-weight: 300;
-  line-height: 3.7rem;
-
-  @include atMedium {
-    font-size: 1.8rem;
-    line-height: 3.7rem;
-  }
-}
-
-
-.site-footer__contact-information-phone {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-
-  @include atMedium {
-    flex-basis: 45%;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
-
-.site-footer__contact-information-phone-number {
-
-}
-
-
-.site-footer__contact-information-phone-number:before {
-  content: "";
-  display: block;
-  background: url("../../icons/icon_phone--blue.svg") no-repeat;
-  width: 2.4rem;
-  height: 2.4rem;
-  float: left;
-  margin: 10px 6px 0 0;
-}
-
-
-.site-footer__contact-information-email {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-
-  @include atMedium {
-    flex-basis: 45%;
-    margin-top: -4.75rem;
-    margin-bottom: 0.75rem;
-    order: 3;
-  }
-}
-
-
-.site-footer__contact-information-email-address {
-
-}
-
-
-.site-footer__contact-information-email-address:before {
-  content: "";
-  display: block;
-  background: url("../../icons/icon_email--blue.svg") no-repeat;
-  width: 2.4rem;
-  height: 2.4rem;
-  float: left;
-  margin: 10px 6px 0 0;
-}
-
-
-.site-footer__contact-information-address {
-  margin-left: 1.0rem;
-  padding-left: 2.0rem;
-
-  @include atMedium {
-    flex-basis: 45%;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-    order: 2;
-
-      font-size: 1.8rem;
-      line-height: 3.7rem;
-  }
-}
-
-
-.site-footer__contact-information-address:before {
-  content: "";
-  display: block;
-  background: url("../../icons/icon_address--blue.svg") no-repeat;
-  width: 2.4rem;
-  height: 2.4rem;
-  float: left;
-  margin: 0.7rem 0 0 -2.6rem;
-}
-
-
-.site-footer__contact-information-member-of {
-
-  @include atMedium {
-    width: 30%;
-  }
-}
-
-
-.site-footer__contact-information-member-of-img {
-  width: calc(100% - 4rem);
-  height: auto;
-  margin-left: 2.0rem;
-
-  @include atMedium {
-    width: 100%;
+    margin-bottom: initial;
     margin-left: 0.0rem;
   }
 }
 
 
+.site-footer__contact-information-data a {
+  font-size: 2.0rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: $color-dark-gray;
+
+  @include atMedium {
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+  }
+}
+
+
+
+.site-footer__contact-information-address {
+
+
+  @include atMedium {
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+
+.site-footer__contact-information-address strong {
+  display: block;
+
+  @include atMedium {
+
+  }
+}
+
+
+
+.site-footer__contact-information-phone {
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+
+  @include atMedium {
+    margin-bottom: 0.25rem;
+  }
+}
+
+
+.site-footer__contact-information-phone-link {
+
+}
+
+
+.site-footer__contact-information-email {
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+
+  @include atMedium {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+
+.site-footer__contact-information-email-link {
+
+}
+
+
+
+.site-footer__contact-information-facebook {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @include atMedium {
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+.site-footer__contact-information-facebook-link {
+
+
+  @include atMedium {
+
+  }
+}
+
+
+
+
+.site-footer__footer-navigation {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include atMedium {
+    margin-top: 4.0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+
+
+
+
+.site-footer__footer-navigation-menu-list {
+
+  @include atMedium {
+    width: 100%;
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+
+
+.site-footer__footer-navigation-menu-list-item {
+  list-style: none;
+  margin-bottom: 1.0rem;
+
+  @include atMedium {
+    margin-bottom: 1.0rem;
+  }
+}
+
+
+.site-footer__footer-navigation-menu-list-item a {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+  color: $color-dark-gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-footer__navbar-container {
+  position: relative;
+  width: 100%;
+  padding-right: 4.0rem;
+  padding-bottom: 1.0rem;
+  padding-left: 4.0rem;
+
+  @include atMedium {
+    position: relative;
+    width: 75%;
+    padding-right: initial;
+    padding-bottom: initial;
+    padding-left: 3.5rem;
+  }
+}
+
+
+.site-footer-navbar {
+  position: relative;
+  width: 100%;
+
+  @include atMedium {
+    padding-top: 1.5rem;
+  }
+}
+
+
+.site-footer-navbar__navigation-list {
+  width: 100%;
+  text-align: left;
+
+  @include atMedium {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3.5rem;
+    list-style: none;
+  }
+}
+
+
+.site-footer__navbar-item {
+  line-height: 3.4rem;
+  margin-top: 3rem;
+
+  @include atMedium {
+    width: 33%;
+    line-height: initial;
+    margin-top: initial;
+  }
+}
+
+
+.site-footer__navbar-item a {
+  /* font-size: 2.0rem;
+  line-height: 2.5rem; */
+  color: $color-dark-gray;
+  font-weight: 400;
+  text-transform: none;
+
+  @include atMedium {
+
+  }
+}
+
+
+.site-footer-navbar__navigation-list {
+  font-family: "Kulim Park", sans-serif;
+  font-size: 2.6rem;
+  line-height: 3.0rem;
+  list-style: none;
+}
+
+
+.site-footer__navbar-item:nth-of-type(1) {
+
+
+  @include atMedium {
+    order: 1;
+  }
+}
+
+
+.site-footer__navbar-item:nth-of-type(2) {
+
+
+  @include atMedium {
+    order: 4;
+  }
+}
+
+
+.site-footer__navbar-item:nth-of-type(3) {
+
+
+  @include atMedium {
+    order: 2;
+  }
+}
+
+
+.site-footer__navbar-item:nth-of-type(4) {
+
+
+  @include atMedium {
+    order: 5;
+  }
+}
+
+
+.site-footer__navbar-item:nth-of-type(5) {
+
+
+  @include atMedium {
+    order: 3;
+  }
+}
+
+
+.site-footer__navbar-item:nth-of-type(6) {
+
+
+  @include atMedium {
+    order: 6;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='SoWo'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-sowo !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='SoWo']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  content: 'Soziales Wohnhaus Neunkirchen';
+}
+
+
+.site-footer-navbar__navigation-list [title='Org'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-sowo !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='Org']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  content: 'Organisation';
+}
+
+
+.site-footer-navbar__navigation-list [title='WG'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-wg !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='WG']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  content: 'Wohngemeinschaft';
+}
+
+
+.site-footer-navbar__navigation-list [title='BeVe'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-beve !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='BeVe']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  Content: 'Begleitete Verselbstständigung';
+}
+
+
+.site-footer-navbar__navigation-list [title='BW'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-bw !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='BW']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  content: 'Betreutes Wohnen';
+}
+
+
+.site-footer-navbar__navigation-list [title='PU/NK'] {
+  display: inline-block;
+  width: 100%;
+  font-weight: 600;
+  border-bottom: 3px solid $color-punk !important;
+  margin-bottom: 1.0rem;
+  margin-right: 2.0rem;
+  padding-bottom: 1.0rem;
+
+  @include atMedium {
+    width: 90%;
+  }
+}
+
+
+.site-footer-navbar__navigation-list [title='PU/NK']:after {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  content: 'Streetwork';
+}
+
+
+.site-footer__navbar-item--submenu {
+  position: relative;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  list-style: none;
+  border-bottom: none;
+}
+
+
+.site-footer__navbar-item--submenu .site-footer__navbar-item {
+  position: relative;
+  width: 100%;
+  margin-top: 1.0rem;
+  margin-bottom: 1.0rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .site-footer__copyright {
   display: block;
   width: 100%;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
   font-weight: 400;
-  color: $color-white;
   text-align: center;
-  background-color: $color-sowo;
+  background-color: $color-white;
+  border-bottom: 8px solid $color-sowo;
   margin: auto;
   padding-top: 4rem;
   padding-bottom: 4rem;
 
   @include atMedium {
     width: 100%;
+  }
+}
+
+
+.site-footer__copyright-container {
+  display: block;
+  width: calc(100% - 4rem);
+  border-top: 1px solid rgba($color-dark-gray,0.45);
+  margin: auto;
+  margin-bottom: 7rem;
+  padding-top: 4rem;
+
+  @include atMedium {
+    margin-bottom: auto;
   }
 }

@@ -38,16 +38,16 @@
 		<link rel="mask-icon" href="<?php echo esc_url( get_template_directory_uri()); ?>/assets/favicon/favicon.svg" color="#B6274F">
 
 		<!-- Apple iOS Safari Theme -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="#B6933D">
-		<meta name="apple-mobile-web-app-title" content="Lion Mate - Energy Beyond Standards">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#6E2596">
+		<meta name="apple-mobile-web-app-title" content="SoWo - Soziales Wohnen Neunkirchen">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 
 		<!-- Microsoft Windows Tiles -->
-		<meta name="theme-color" content="#B6933D">
-		<meta name="msapplication-navbutton-color" content="#525050">
-		<meta name="msapplication-TileColor" content="#B6274F">
+		<meta name="theme-color" content="#6E2596">
+		<meta name="msapplication-navbutton-color" content="#FF9500">
+		<meta name="msapplication-TileColor" content="#6E2596">
 		<meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri()); ?>/assets/favicon/windows-tile-icon-144x144.png">
-		<meta name="application-name" content="EPICON Engineering GmbH">
+		<meta name="application-name" content="SoWo - Soziales Wohnen Neunkirchen">
 
 		<!-- Internet Explorer 11 Tiles -->
 		<meta name="msapplication-square70x70logo" content="<?php echo esc_url( get_template_directory_uri()); ?>/assets/favicon/ms-ie11-icon-70x70.png">
@@ -56,11 +56,11 @@
 		<meta name="msapplication-square310x310logo" content="<?php echo esc_url( get_template_directory_uri()); ?>/assets/favicon/ms-ie11-icon-310x310.png">
 
 		<!-- Open Graph -->
-		<meta property="og:title" content="EPICON Engineering GmbH">
+		<meta property="og:title" content="SoWo - Soziales Wohnen Neunkirchen">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://www.epicon.pro">
+		<meta property="og:url" content="https://www.sowo.at">
 		<meta property="og:image" content="og_image_url">
-		<meta property="og:site_name" content="EPICON Engineering GmbH">
+		<meta property="og:site_name" content="SoWo - Soziales Wohnen Neunkirchen">
 		<meta property="og:locale" content="de_AT">
 
 		<!-- Site Title -->
@@ -77,38 +77,6 @@
 
 	<body <?php body_class( 'site-body' ); ?>>
 
-		<header class="site-header-top">
-			<div class="site-header-top__wrapper">
-				<div class="site-header-top__contact-information">
-					<div class="site-header-top__contact-information-email">
-						<img class="site-header-top__contact-information-email-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_email--blue.svg"/>
-						<a class="site-header-top__contact-information-email-address" href="mail:info@epicon.pro">info@epicon.pro</a>
-					</div>
-
-					<div class="site-header-top__contact-information-phone">
-						<img class="site-header-top__contact-information-phone-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_phone--blue.svg"/>
-						<a class="site-header-top__contact-information-phone-number" href="tel:+43266240060">+43 2662 40060</a>
-					</div>
-
-					<div class="site-header-top__contact-information-address">
-						<img class="site-header-top__contact-information-address-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_address--blue.svg"/>
-						Energiestraße 2, 2540 Bad Vöslau
-					</div>
-				</div>
-
-				<div class="language__container">
-					<ul class="language__list">
-						<li class="language__list-item">
-							<a class="language__list-item-link" href="#">DE</a>
-						</li>
-						<li class="language__list-item">
-							<a class="language__list-item-link" href="#">EN</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</header>
-
 		<header class="site-header">
 			<div class="site-header__wrapper">
 
@@ -118,27 +86,14 @@
 						<a class="header-logo__link wrapper" href="<?php echo get_home_url(); ?>">
 							<img
 								class="site-header__logo-img"
-								src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/logos/header-logo_epicon.svg"
-								alt="Logo EPICON Engineering GmbH"
+								src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/images/header-logo_sowo.svg"
+								alt="Logo SoWo - Soziales Wohnhaus Neunkirchen"
 							/>
 						</a>
 					</div>
 				</div>
 
 				<div class="site-header__nav-container">
-
-					<!-- Language Switcher on Mobile -->
-					<div class="mobile-language__container">
-						<ul class="mobile-language__list">
-							<li class="mobile-language__list-item">
-								<a class="mobile-language__list-item-link" href="#">DE</a>
-							</li>
-							<li class="mobile-language__list-item">
-								<a class="mobile-language__list-item-link" href="#">EN</a>
-							</li>
-						</ul>
-					</div
-
 
 					<!-- Hamburger Menu Toggle -->
 					<nav class="main-navigation">
@@ -178,59 +133,97 @@
 
 
 		<div class="large-hero">
-
 			<?php
-				$image_desktop = get_field('hero-img__desktop');
-				$image_smartphone = get_field('hero-img__smartphone');
+			$image_desktop = get_field('hero-img__desktop');
+			$image_smartphone = get_field('hero-img__smartphone');
 
-				if ( is_singular( 'job' ) ) { ?>
-				 <img class="large-hero__img large-hero__img--desktop lazyload" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/large-hero.jpg" alt="EPICON Hero Header" />
-				<?php } else {
-				 	if( !empty( $image_desktop ) ): ?>
-					 	<img class="large-hero__img large-hero__img--desktop lazyload" src="<?php echo esc_url($image_desktop['url']); ?>" alt="<?php echo esc_attr($image_desktop['alt']); ?>" />
-				 	<?php endif;
+			if ( is_singular( array( 'post', 'press-release' ) ) || ( is_category ( array( 'aktuelles', 'events', 'projekte', 'press-release' ) ) ) ) { ?>
+			 <img class="large-hero__img lar ge-hero__img--desktop lazyload" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hero-image.jpg" alt="SoWo Hero Header" />
+			<?php } else {
+				 if( !empty( $image_desktop ) ): ?>
+					 <img class="large-hero__img large-hero__img--desktop lazyload" src="<?php echo esc_url($image_desktop['url']); ?>" alt="<?php echo esc_attr($image_desktop['alt']); ?>" />
+				 <?php endif;
 
-				 	if( !empty( $image_smartphone ) ): ?>
-					 	<img class="large-hero__img large-hero__img--smartphone lazyload" src="<?php echo esc_url($image_smartphone['url']); ?>" alt="<?php echo esc_attr($image_smartphone['alt']); ?>" />
-				 	<?php endif;
-				} ?>
+				 if( !empty( $image_smartphone ) ): ?>
+					 <img class="large-hero__img large-hero__img--smartphone lazyload" src="<?php echo esc_url($image_smartphone['url']); ?>" alt="<?php echo esc_attr($image_smartphone['alt']); ?>" />
+				 <?php endif;
+			} ?>
 
 
 
-			<!-- <div class="large-hero__text">
-				<h1 class="">
-					<?php the_title();?>
-				</h1>
-			</div> -->
+
+
+
+
 		</div>
 
-		<div class="contact-navbar">
-			<div class="contact-navbar__wrapper">
+		<aside id="contact-sidebar">
+			<section id="contact-sidebar__phone">
+				<a class="contact-sidebar__phone-link" href="
+					<?php
+					if ( is_page( 'wg' ) ) {
+						echo 'tel:+436766981648';
+					} elseif ( is_page( 'bw' ) ) {
+						echo 'tel:+436767086332';
+					} elseif ( is_page( 'beve' ) ) {
+						echo 'tel:+436765958879';
+					} elseif ( is_page( 'pu-nk' ) ) {
+					echo 'tel:+436801228924';
+					} else {
+							echo '#';
+					}
+					?>
+					" />
+					<img class="contact-sidebar_phone-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_phone--white.svg"/>
+				</a>
+			</section>
+			<section id="contact-sidebar__email">
+				<a class="contact-sidebar__email-link" href="
+					<?php
+					if ( is_page( 'wg' ) ) {
+						echo 'mailto:wg@sowo.at';
+					} elseif ( is_page( 'bw' ) ) {
+						echo 'mailto:bw@sowo.at';
+					} elseif ( is_page( 'beve' ) ) {
+						echo 'mailto:beve@sowo.at';
+					} elseif ( is_page( 'pu-nk' ) ) {
+					echo 'mailto:streetwork@sowo.at';
+					} else {
+							echo 'mailto:office@sowo.at';
+					}
+					?>
+					">
+					<img class="contact-sidebar__email-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_email--white.svg"/>
+				</a>
+			</section>
 
-				<div class="contact-navbar__item contact-navbar__item--email">
-					<img class="contact-navbar__item--email-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_email--blue.svg"/>
-					<a class="contact-navbar__item--email-address" href="mail:info@epicon.pro">info@epicon.pro</a>
-				</div>
-
-				<div class="contact-navbar__item contact-navbar__item--phone">
-					<img class="contact-navbar__item--phone-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_phone--blue.svg"/>
-					<a class="contact-navbar__item--phone-number" href="tel:+43266240060">+43 2662 40060</a>
-				</div>
-
-			</div>
-		</div>
+			<section id="contact-sidebar__facebook">
+				<a class="contact-sidebar__facebook-link" href="
+					<?php
+					if ( is_page( 'wg' ) ) {
+						echo 'https://www.facebook.com/profile.php?id=100064312793782';
+					} elseif ( is_page( 'bw' ) ) {
+						echo 'https://www.facebook.com/profile.php?id=100064312793782';
+					} elseif ( is_page( 'beve' ) ) {
+						echo 'https://www.facebook.com/profile.php?id=100064312793782';
+					} elseif ( is_page( 'pu-nk' ) ) {
+					echo 'https://www.facebook.com/profile.php?id=100064312793782';
+					} else {
+							echo 'https://www.facebook.com/profile.php?id=100064312793782';
+					}
+					?>
+					" target="_blank">
+					<img class="contact-sidebar__facebook-icon" src="<?php bloginfo( 'template_directory' ); ?>/assets/icons/icon_facebook--white.svg"/>
+				</a>
+			</section>
+		</aside>
 
 		<main class="site-main">
 			<div class="site-content">
 				<div class="inner-container">
-					<h1 class="site-title"><?php the_title();?></h1>
-					<h2 class="site-content__intro-heading">
-						<?php the_field("pages_subheading"); ?>
-					</h2>
-
-
-
-
-
-
-
+					<?php
+					if ( is_category ( array( 'aktuelles', 'events', 'projekte', 'press-release' ) ) ) { ?>
+					<h1 class="site-title"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
+					<?php } else { ?>
+						<h1 class="site-title"><?php the_title();?> <span class="site-title-subheading"><?php the_field('page_subheading');?></span></h1>
+					<?php } ?>

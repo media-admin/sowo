@@ -1,0 +1,50 @@
+/* === SINGLE POST === */
+.single-post {
+
+	.single-post__thumbnail-wrapper {
+		position: relative;
+		width: 100%;
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+	}
+
+
+	.single-post__thumbnail {
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+
+	.single-post__sidebar {
+		margin-top: 4.0rem;
+		margin-bottom: 4.0rem;
+	}
+
+
+	.single-post__sidebar-navigation {
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	.hr__single-post-sidebar {
+		margin-top: 2.0rem;
+		margin-bottom: 2.0rem;
+	}
+
+
+	.hr__single-post-sidebar--before {
+		color: $color-wg !important;
+		margin-bottom: 2.0rem;
+	}
+
+
+	.hr__single-post-sidebar--after {
+		color: $color-wg !important;
+		margin-top: 2.25rem;
+	}
+
+}
+
+

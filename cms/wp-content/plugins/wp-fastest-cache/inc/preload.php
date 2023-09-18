@@ -573,17 +573,21 @@
 			}
 		}
 
-		public static function prepare_sitemap($url = false, $sitemap_cache_path){
-			if($url){
-
+		public static function prepare_sitemap($url, $sitemap_cache_path){
+			if(!empty($url)){
 				$content = $GLOBALS["wp_fastest_cache"]->wpfc_remote_get($url, "xxxx", true);
 
 				$content = strtolower($content);
 				$content = preg_replace("/<\?\s*xml[^\>]*>/i", "", $content);
 				$content = preg_replace("/<\/?urlset[^\>]*>/i", "", $content);
 				$content = preg_replace("/<((?:(?!url|loc).)+)>((?:(?!http).)+)<((?:(?!url|loc).)+)>/i", "", $content);
+				
+				// to remove <image:loc> tag
+				$content = preg_replace("/<\s*image\s*\:\s*loc\s*>[^\>\<]*<\s*\/\s*image\s*\:\s*loc\s*>/", "", $content);
+
 				$content = preg_replace("/\s/i", "", $content);
 				$content = preg_replace("/<\/url>/i", "</url>\n", $content);
+
 
 				if(!is_dir($GLOBALS["wp_fastest_cache"]->getWpContentDir("/cache/all/"))){
 					@mkdir($GLOBALS["wp_fastest_cache"]->getWpContentDir("/cache/all/"), 0755, true);

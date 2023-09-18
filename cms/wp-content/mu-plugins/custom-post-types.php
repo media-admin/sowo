@@ -12,6 +12,34 @@ function custom_post_types() {
 	} );
 
 
+	/* --- Custom Post Type PRESSE RELEASE --- */
+	$labels = array(
+		'name' =>  'Presse Releases',
+		'add_new' => 'Neuen Presse Release erstellen',
+		'edit_item' => 'Presse Release bearbeiten',
+		'singular_name' => 'Presse Release',
+		'all_items' => 'Alle Presse Releases',
+		'supports' => array('title', 'author', 'custom-fields',
+	));
+
+	register_post_type( 'press-release', array(
+		'show_in_rest' => true,
+		'public' => true,
+		'show_ui' => true,
+		'labels' => $labels,
+		'supports' => ['revisions', 'thumbnail', 'title', 'editor', 'custom-fields'],
+		'has_archive' => true,
+		'exclude_from_search' => false,
+		'rewrite' => array('slug' => 'press-releases', 'with_front' => true, 'pages' => true, 'feeds' => true,),
+		'menu_position' => 9,
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => false,
+		'publicly_queryable'  => true,
+		'menu_icon' => 'dashicons-megaphone'
+	));
+
+	add_post_type_support( 'press-release', 'thumbnail' );
+
 
 
 	/* --- Custom Post Type TEAM MEMBERS --- */
@@ -41,6 +69,34 @@ function custom_post_types() {
 	));
 
 	add_post_type_support( 'team-member', 'thumbnail' );
+
+
+	/* --- Custom Post Type ANNUAL REPORT --- */
+	$labels = array(
+		'name' =>  'Jahresberichte',
+		'add_new' => 'Neuen Jahresbericht erstellen',
+		'edit_item' => 'Jahresbericht bearbeiten',
+		'singular_name' => 'Jahresbericht',
+		'all_items' => 'Alle Jahresberichte',
+		'supports' => array('title', 'editor', 'author', 'custom-fields',
+	));
+
+	register_post_type( 'annual-report', array(
+		'show_in_rest' => true,
+		'public' => true,
+		'show_ui' => true,
+		'labels' => $labels,
+		'supports' => ['editor', 'revisions', 'thumbnail', 'title', 'custom-fields'],
+		'has_archive' => false,
+		'exclude_from_search' => false,
+		'menu_position' => 16,
+		'show_in_admin_bar'   => false,
+		'show_in_nav_menus'   => false,
+		'publicly_queryable'  => true,
+		'menu_icon' => 'dashicons-text-page'
+	));
+
+	add_post_type_support( 'annual-report', 'thumbnail' );
 
 
 
@@ -112,7 +168,37 @@ function custom_post_types() {
 
 
 
-	/* --- Custom Post Type CONTACT DETAILS --- */
+	/* --- Custom Post Type SPONSOR --- */
+	$labels = array(
+		'name' =>  'Sponsoren',
+		'add_new' => 'Neuen Sponsor anlegen',
+		'edit_item' => 'Sponsor bearbeiten',
+		'singular_name' => 'Sponsor',
+		'all_items' => 'Alle Sponsorren',
+		'supports' => array('title', 'editor', 'author', 'custom-fields'
+	));
+
+	register_post_type( 'sponsor', array(
+		'show_in_rest' => true,
+		'public' => true,
+		'show_ui' => true,
+		'taxonomies' => array( 'sponsor-category' ),
+		'labels' => $labels,
+		'supports' => ['editor', 'revisions', 'thumbnail', 'title', 'custom-fields'],
+		'has_archive' => false,
+		'exclude_from_search' => true,
+		'menu_position' => 12,
+		'show_in_admin_bar'   => false,
+		'show_in_nav_menus'   => false,
+		'publicly_queryable'  => true,
+		'menu_icon' => 'dashicons-awards'
+	));
+
+	add_post_type_support( 'sponsor', 'thumbnail' );
+
+
+
+	/* --- Custom Post Type CONTACT DETAILS ---
 
 	$labels = array(
 		'name' =>  'Kontakt-Details',
@@ -139,7 +225,7 @@ function custom_post_types() {
 	));
 
 	add_post_type_support( 'contact-detail', '' );
-
+	*/
 
 
 
@@ -246,6 +332,31 @@ function custom_taxonomies() {
 	);
 
 	register_taxonomy('partner-category', array('partner'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'show_in_rest' => true,
+		'query_var' => true,
+	));
+
+
+	/* --- Custom Taxonomie SPONSOR CATEGORY --- */
+	$labels = array(
+		'name' => _x( 'Sponsor-Kategorien', 'taxonomy general name' ),
+		'singular_name' => _x( 'Sponsor-Kategorie', 'taxonomy singular name' ),
+		'search_items' =>  __( 'Sponsor-Kategorien durchsuchen' ),
+		'popular_items' => __( 'Meist benutzte Sponsor-Kategorien' ),
+		'all_items' => __( 'Alle Sponsor-Kategorien' ),
+		'parent_item' => __( 'Übergeordnete Sponsor-Kategorie' ),
+		'parent_item_colon' => __( 'Übergeordnete Sponsor-Kategorien:' ),
+		'edit_item' => __( 'Sponsor-Kategorie bearbeiten' ),
+		'update_item' => __( 'Sponsor-Kategorie aktualisieren' ),
+		'add_new_item' => __( 'Neue Sponsor-Kategorien hinzufügen' ),
+		'new_item_name' => __( 'Name der neuen Sponsor-Kategorie' ),
+	);
+
+	register_taxonomy('sponsor-category', array('sponsor'), array(
 		'hierarchical' => true,
 		'labels' => $labels,
 		'show_ui' => true,

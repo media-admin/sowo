@@ -5,7 +5,7 @@
 jQuery(document).ready(function(){
 
 	// Der Button wird mit JavaScript erzeugt und vor dem Ende des body eingebunden.
-	var back_to_top_button = ['<a href="#top" class="back-to-top"><p><img src="https://sowo-maintain.dev/cms/wp-content/themes/epicon-pro/assets/icons/icon_back-to-top.svg" alt="Back to Top"></p></a>'].join("");
+	var back_to_top_button = ['<a href="#top" class="back-to-top"><p><img src="https://sowo-maintain.dev/cms/wp-content/themes/sowo/assets/icons/icon_back-to-top.svg" alt="Back to Top"></p></a>'].join("");
 	jQuery("body").append(back_to_top_button)
 
 	// Der Button wird ausgeblendet

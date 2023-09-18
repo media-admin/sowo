@@ -1,0 +1,59 @@
+/* === PAGE STYLE BW === */
+.bw {
+
+	& h1 {
+		color: $color-bw;
+	}
+
+
+	& h2.wp-block-heading {
+		background-color: $color-bw;
+	}
+
+
+	h3.wp-block-heading {
+		border-bottom-color: $color-bw;
+	}
+
+
+	#contact-sidebar section {
+		background-color: $color-bw;
+	}
+
+
+	& .team-members__person  {
+		background-color: rgba($color-bw,0.75);
+	}
+
+
+	& .contact-person__person  {
+		background-color: rgba($color-bw,0.75);
+	}
+
+
+	& .wp-block-quote p:before {
+		color: $color-bw;
+	}
+
+
+	& .wp-block-quote p:after {
+		color: $color-bw;
+	}
+
+
+	& .google-map .btn  {
+		background-color: $color-bw;
+	}
+
+
+	& .google-map .btn:hover  {
+		color: $color-bw !important;
+		background-color: $color-white;
+	}
+
+
+	& .contact-link a {
+		color: $color-bw !important;
+	}
+
+}

@@ -1,0 +1,179 @@
+/* === ANNUAL REPORTS === */
+.annual-reports {
+
+	@include atMedium {
+
+	}
+
+	&__container {
+		position: relative;
+		display: block;
+		width: 100%;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__listing {
+		position: relative;
+		width: 100%;
+		display: flex;
+
+		flex: 1;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+
+		@include atMedium {
+			flex: 2;
+			gap: 1%;
+			margin-left: -1.0rem;
+			margin-right: -1.0rem;
+		}
+	}
+
+
+	&__listing-item {
+		position: relative;
+		width: 100%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-direction: row;
+		flex-grow: 0;
+		flex-shrink: 0;
+		justify-content: space-around;
+		align-items: flex-start;
+		text-align: left;
+		list-style: none;
+		margin: 0.5rem;
+		margin-bottom: 2.0rem;
+		padding: 0.0rem;
+
+		@include atMedium {
+			position: relative;
+			width: 47%;
+			flex-grow: 0;
+			flex-shrink: 0;
+			margin-bottom: 3%;
+		}
+	}
+
+
+	&__card {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+
+		@include atMedium {
+			flex: 2;
+			flex-direction: row;
+			gap: 2%;
+		}
+	}
+
+
+	&__link {
+		width: 100%;
+		height: auto;
+		border: 1px solid $color-lighter-gray;
+
+		@include atMedium {
+			width: 35%;
+			height: auto;
+		}
+	}
+
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		object-position: center center;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__information {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: "Sofia Sans Condensed", sans-serif;
+		font-size: 2.0rem;
+		line-height: 2.4rem;
+		color: $color-white;
+		border: 1px solid $color-lighter-gray;
+		padding: 1.0rem 1.5rem;
+		padding-bottom: 0;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__information p {
+
+	}
+
+
+	&__information a {
+		color: $color-dark-gray;
+		text-decoration: none;
+	}
+
+
+	&__title {
+		font-family: "Gemunu Libre", sans-serif;
+		font-size: 2.8rem;
+		line-height: 3.1rem;
+		font-weight: 600;
+		color: $color-sowo;
+		margin-bottom: 1.5rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__flip-book {
+		font-size: 2.0rem;
+		line-height: 2.7rem;
+		font-weight: 400;
+		font-style: italic;
+		text-transform: uppercase;
+		letter-spacing: 0.05rem;
+		margin-bottom: 1.0rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__download {
+		font-size: 2.0rem;
+		line-height: 2.4rem;
+		font-weight: 400;
+		letter-spacing: 0.05rem;
+		margin-bottom: 1.0rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+}

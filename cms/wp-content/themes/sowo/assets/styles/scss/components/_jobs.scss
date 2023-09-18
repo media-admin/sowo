@@ -1,0 +1,327 @@
+/* === JOBS === */
+.jobs {
+
+	@include atMedium {
+
+	}
+
+
+	&__container {
+		position: relative;
+		display: block;
+		width: 100%;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__title {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+		font-weight: 600;
+		letter-spacing: 0.05rem;
+		text-transform: none;
+		color: $color-sowo;
+		background-color: transparent;
+		margin-bottom: 0.25rem;
+		padding-left: 0.0rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__summary {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__summary strong {
+		font-size: 2.0rem;
+		line-height: 2.2rem;
+		font-weight: 300;
+		color: $color-sowo;
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__responsibilities-heading {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__responsibilities-content {
+
+
+		@include atMedium {
+
+		}
+
+		& ul {
+			list-style: none;
+			margin-left: 1.0rem;
+			padding-left: 1.5rem;
+
+			@include atMedium {
+
+			}
+		}
+
+
+		& ul li::before {
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			background-size: contain;
+			background-image: url("../../icons/icon_responsibilities--purple.svg");
+			margin-right: 8px;
+			margin-left: -20px;
+		}
+
+	}
+
+
+
+
+
+
+	&__requirements-heading {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__requirements-content {
+
+
+		@include atMedium {
+
+		}
+
+
+		& ul {
+			list-style: none;
+			margin-left: 1.0rem;
+			padding-left: 1.5rem;
+
+			@include atMedium {
+
+			}
+		}
+
+
+		& ul li::before {
+			content: '';
+			display: inline-block;
+			height: 11px;
+			width: 12px;
+			background-size: cover;
+			background-image: url("../../icons/icon_requirements--purple.svg");
+			margin-right: 8px;
+			margin-left: -20px;
+		}
+	}
+
+
+
+
+
+	&__offer-heading {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__offer-content {
+
+
+		@include atMedium {
+
+		}
+
+
+		& ul {
+			list-style: none;
+			margin-left: 1.0rem;
+			padding-left: 1.5rem;
+
+			@include atMedium {
+
+			}
+		}
+
+
+		& ul li::before {
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			background-size: contain;
+			background-image: url("../../icons/icon_offer--purple.svg");
+			margin-right: 8px;
+			margin-left: -20px;
+		}
+	}
+
+
+	&__start-heading {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__start-content {
+		margin-left: 1.0rem;
+		padding-left: 1.5rem;
+
+		@include atMedium {
+
+		}
+
+
+	&::before {
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 11px;
+			background-size: contain;
+			background-image: url("../../icons/icon_start--purple.svg");
+			margin-right: 9px;
+			margin-left: -20px;
+		}
+
+	}
+
+
+	&__provider-heading {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__provider-content {
+
+
+		@include atMedium {
+
+		}
+	}
+
+
+	&__provider {
+		margin-left: 1.0rem;
+		padding-left: 1.5rem;
+
+		@include atMedium {
+
+		}
+
+
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 10px;
+			background-size: contain;
+			background-image: url("../../icons/icon_provider--purple.svg");
+			margin-right: 10px;
+			margin-left: -20px;
+		}
+	}
+
+
+	&__contact-person {
+		margin-left: 1.0rem;
+		padding-left: 1.5rem;
+
+		@include atMedium {
+
+		}
+
+
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 13px;
+			width: 11px;
+			background-size: contain;
+			background-image: url("../../icons/icon_contact-person--purple.svg");
+			margin-right: 9px;
+			margin-left: -20px;
+		}
+	}
+
+
+	&__btn-application {
+
+		font-size: 2.0rem !important;
+		line-height: 2.2rem !important;
+		text-transform: none !important;
+		letter-spacing: 0 !important;
+		color: $color-white !important;
+		background-color: $color-sowo;
+		border-radius: 16px;
+		padding: 1.25rem 2.0rem !important;
+
+		@include atMedium {
+
+		}
+
+
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 18px;
+			width: 18px;
+			background-size: contain;
+			background-image: url("../../icons/icon_email--white.svg");
+			margin-right: 8px;
+
+		}
+
+	}
+
+
+	&__divider {
+		color: $color-light-gray;
+		margin-top: 6.0rem;
+		margin-bottom: 6.0rem;
+
+		@include atMedium {
+
+		}
+	}
+
+	&__divider:last {
+		display: none;
+	}
+
+}
