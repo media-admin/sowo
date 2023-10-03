@@ -23,8 +23,8 @@
 					</div>
 
 					<div class="site-footer__contact-information-phone">
-						<a class="site-footer__contact-information-phone-link" href="tel:+43263512345">
-							02635/12345
+						<a class="site-footer__contact-information-phone-link" href="tel:+436506455600">
+							0650/ 645 56 00
 						</a>
 					</div>
 

@@ -1334,6 +1334,143 @@ tbody tr td:first-child {
   margin-bottom: 2rem !important;
   padding: 1rem 1.75rem !important;
 }
+/* === ZIVILDIENST OVERVIEW === */
+.zivildienst-overview {
+  margin-top: 4rem;
+}
+.zivildienst-overview__container {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.zivildienst-overview__listing {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  justify-content: flex-start;
+  padding-left: 0px !important;
+  padding-right: 1rem;
+}
+@media (min-width: 769px) {
+  .zivildienst-overview__listing {
+    margin-left: initial;
+  }
+}
+.zivildienst-overview__listing-item {
+  position: relative;
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: left;
+  list-style: none;
+  background-color: rgba(110, 37, 150, 0.08);
+  border: 0.5px solid rgba(110, 37, 150, 0.5);
+  margin: 0.5rem;
+  margin-bottom: 3%;
+  padding: 0rem;
+}
+.zivildienst-overview__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.zivildienst-overview__card-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch !important;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 769px) {
+  .zivildienst-overview__card-container {
+    flex-direction: row;
+  }
+}
+.zivildienst-overview__img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  /* min-height: 200px;
+  max-height: 200px; */
+  height: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.zivildienst-overview__thumbnail {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .zivildienst-overview__thumbnail {
+    max-height: 350px;
+    object-fit: contain;
+    object-position: center center;
+    margin: 2rem auto;
+  }
+}
+.zivildienst-overview__content-container {
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1.5rem;
+}
+.zivildienst-overview__meta-tags {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+.zivildienst-overview__post-title {
+  min-height: 5.2rem;
+  font-family: "Kulim Park", sans-serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  color: #6E2596;
+  background-color: transparent;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+.zivildienst-overview__post-excerpt {
+  font-size: 1.8rem;
+  line-height: 3.9rem;
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+}
+.zivildienst-overview__btn-more {
+  font-size: 1.8rem !important;
+  line-height: 2rem !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: #ffffff !important;
+  background-color: #6E2596;
+  border-radius: 14px;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding: 1rem 1.75rem !important;
+}
 /* === PRESS RELEASES OVERVIEW === */
 .press-releases-overview {
   margin-top: 4rem;
@@ -2367,6 +2504,113 @@ tbody tr td:first-child {
   cursor: pointer;
 }
 
+/* === GIVEWP GRID === */
+.give-wrap .give-grid__item > a:hover {
+  border-color: none;
+  box-shadow: none;
+}
+.give-wrap .give-card {
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: rgba(110, 37, 150, 0.08);
+  border: 0.5px solid rgba(110, 37, 150, 0.5);
+  margin: 0.5rem;
+  margin-bottom: 3%;
+}
+.give-wrap .give-form-grid-media {
+  min-height: 380px !important;
+  background-color: transparent !important;
+}
+.give-wrap .give-card__media {
+  display: flex;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+.give-wrap .give-form-grid-media .give-card__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain !important;
+  margin: auto 0;
+}
+.give-wrap .give-form-grid-content {
+  justify-content: flex-start;
+}
+.give-wrap .give-form-grid-content__title {
+  min-height: 2rem;
+  font-family: "Kulim Park", sans-serif;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #6E2596;
+  background-color: transparent;
+  border-bottom: none;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+.give-wrap .give-form-grid-content__text {
+  min-height: 6.6rem;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.give-wrap .give-form-grid-content > button {
+  position: relative;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 1.8rem !important;
+  font-weight: 600;
+  line-height: 2rem !important;
+  text-transform: none !important;
+  text-decoration: none;
+  letter-spacing: 0 !important;
+  background-color: #6E2596 !important;
+  border: 0px solid;
+  border-radius: 14px;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding: 1rem 1.75rem !important;
+}
+.give-wrap .give-form-grid-content > button > span {
+  color: #ffffff !important;
+}
+
+/* === GIVEWP FORMS === */
+.give-embed-form-wrapper.modal .introduction, .give-embed-form-wrapper.modal .description {
+  font-family: "Sofia Sans Condensed", sans-serif !important;
+  font-size: 1.6rem !important;
+  line-height: 2.2rem !important;
+  font-weight: 400 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+.give-embed-form-wrapper.modal .give-btn {
+  position: relative !important;
+  font-family: "Sofia Sans Condensed", sans-serif !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  line-height: 2rem !important;
+  text-transform: none !important;
+  text-decoration: none;
+  letter-spacing: 0 !important;
+  color: #ffffff !important;
+  background-color: #6E2596 !important;
+  border: 0px solid !important;
+  border-radius: 14px;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding: 1rem 1.75rem !important;
+}
+.give-embed-form-wrapper.modal .close-btn {
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+}
+
 /* === BUTTON BACK TO TOP === */
 .back-to-top {
   position: fixed;
@@ -3083,6 +3327,29 @@ tbody tr td:first-child {
 }
 .beve .contact-link a {
   color: #00C0E3 !important;
+}
+@media (min-width: 769px) {
+  .beve .wp-block-gallery.has-nested-images.columns-default.is-cropped.is-layout-flex.wp-block-gallery-is-layout-flex figure {
+    width: calc(15% - var(--wp--style--unstable-gallery-gap, 16px) / 4) !important;
+    height: auto !important;
+  }
+}
+@media (min-width: 769px) {
+  .beve .wp-block-gallery.has-nested-images.columns-2.is-cropped.is-layout-flex.wp-block-gallery-is-layout-flex figure {
+    width: calc(15% - var(--wp--style--unstable-gallery-gap, 16px) / 4) !important;
+    height: auto !important;
+  }
+}
+@media (min-width: 769px) {
+  .beve .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) a,
+.beve .wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+    position: relative;
+    flex: 1 0 0%;
+    width: 100%;
+    max-height: 450px;
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 /* === PAGE STYLE PU/NK === */

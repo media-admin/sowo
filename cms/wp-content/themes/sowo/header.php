@@ -137,7 +137,7 @@
 			$image_desktop = get_field('hero-img__desktop');
 			$image_smartphone = get_field('hero-img__smartphone');
 
-			if ( is_singular( array( 'post', 'press-release' ) ) || ( is_category ( array( 'aktuelles', 'events', 'projekte', 'press-release' ) ) ) ) { ?>
+			if ( is_singular( array( 'post', 'press-release' ) ) || ( is_category ( array( 'aktuelles', 'events', 'projekte', 'press-release' ) ) ) || ( is_archive( 'press-release' ) ) ) { ?>
 			 <img class="large-hero__img lar ge-hero__img--desktop lazyload" src="<?php bloginfo( 'template_directory' ); ?>/assets/images/hero-image.jpg" alt="SoWo Hero Header" />
 			<?php } else {
 				 if( !empty( $image_desktop ) ): ?>
@@ -166,11 +166,11 @@
 					} elseif ( is_page( 'bw' ) ) {
 						echo 'tel:+436767086332';
 					} elseif ( is_page( 'beve' ) ) {
-						echo 'tel:+436765958879';
+						echo 'tel:+436766981648';
 					} elseif ( is_page( 'pu-nk' ) ) {
 					echo 'tel:+436801228924';
 					} else {
-							echo '#';
+							echo 'tel:+436506455600';
 					}
 					?>
 					" />
@@ -222,8 +222,10 @@
 			<div class="site-content">
 				<div class="inner-container">
 					<?php
-					if ( is_category ( array( 'aktuelles', 'events', 'projekte', 'press-release' ) ) ) { ?>
+					if ( is_category ( array( 'aktuelles', 'events', 'projekte', 'zivildienst' ) ) ) { ?>
 					<h1 class="site-title"><?php $cat = get_the_category(); echo $cat[0]->cat_name; ?></h1>
+					<?php } elseif ( is_archive( 'press-release' ) ) { ?>
+					<h1 class="site-title">Press Releases Übersicht</h1>
 					<?php } else { ?>
 						<h1 class="site-title"><?php the_title();?> <span class="site-title-subheading"><?php the_field('page_subheading');?></span></h1>
 					<?php } ?>

@@ -27,6 +27,14 @@ function shortcode_posts_overview_projekte() {
 add_shortcode( 'shortcode_posts_overview_projekte', 'shortcode_posts_overview_projekte' );
 
 
+function shortcode_posts_overview_zivildienst() {
+	ob_start();
+	get_template_part( 'shortcodes/shortcode_posts-overview-zivildienst');
+	return ob_get_clean();
+}
+
+add_shortcode( 'shortcode_posts_overview_zivildienst', 'shortcode_posts_overview_zivildienst' );
+
 
 
 

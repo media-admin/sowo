@@ -1,0 +1,46 @@
+/* === GIVEWP FORMS === */
+.give-embed-form-wrapper.modal {
+
+	@include atMedium {
+
+	}
+
+	& .introduction,
+	& .description {
+		font-family: "Sofia Sans Condensed", sans-serif !important;
+		font-size: 1.6rem !important;
+		line-height: 2.2rem !important;
+		font-weight: 400 !important;
+		margin-top: 2rem !important;
+		margin-bottom: 1rem !important;
+
+	}
+
+
+
+	& .give-btn {
+		position: relative !important;
+		font-family: "Sofia Sans Condensed", sans-serif !important;
+		font-size: 1.8rem !important;
+		font-weight: 600 !important;
+		line-height: 2.0rem !important;
+		text-transform: none !important;
+		text-decoration: none;
+		letter-spacing: 0 !important;
+		color: $color-white !important;
+		background-color: $color-sowo !important;
+		border: 0px solid !important;
+		border-radius: 14px;
+		margin-top: 1.0rem !important;
+		margin-bottom: 2.0rem !important;
+		padding: 1.0rem 1.75rem !important;
+	}
+
+
+	& .close-btn {
+		font-size: 1.4rem !important;
+		font-weight: 400 !important;
+	}
+
+
+}

@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Give - Donation Plugin plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Give - Donation Plugin 2.33.1\n"
+"Project-Id-Version: Give - Donation Plugin 2.33.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/givewp\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-08-31T22:57:02+00:00\n"
+"POT-Creation-Date: 2023-09-29T17:07:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: give\n"
@@ -1025,7 +1025,8 @@ msgstr ""
 #: includes/formatting.php:767
 #: includes/gateways/manual.php:80
 #: includes/gateways/stripe/includes/admin/admin-actions.php:183
-#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:189
+#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:193
+#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:214
 #: src/Log/ValueObjects/LogType.php:48
 msgid "Error"
 msgstr ""
@@ -1086,7 +1087,7 @@ msgstr ""
 #: includes/gateways/actions.php:48
 #: includes/gateways/manual.php:80
 #: includes/process-donation.php:880
-#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:185
+#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:189
 msgid "We're unable to recognize your session. Please refresh the screen to try again; otherwise contact your website administrator for assistance."
 msgstr ""
 
@@ -15298,6 +15299,10 @@ msgstr ""
 
 #: src/Helpers/Gateways/Stripe.php:57
 msgid "using Manual API Keys."
+msgstr ""
+
+#: src/LegacyPaymentGateways/Adapters/LegacyPaymentGatewayAdapter.php:210
+msgid "This donation form is not accepting donations."
 msgstr ""
 
 #: src/LegacySubscriptions/includes/give-subscription.php:208

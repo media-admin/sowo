@@ -390,6 +390,13 @@
 				}
 			}
 
+			if($et_divi = get_option("et_divi")){
+				// Divi Theme - Static CSS File Generation
+				if(isset($et_divi["et_pb_static_css_file"]) && $et_divi["et_pb_static_css_file"] == "on"){
+					return array("You have to disable the <u><a target='_blank' href='https://www.wpfastestcache.com/tutorial/divi-theme-settings/'>Static CSS File Generation</a></u> option of Divi Theme", "error");
+				}
+			}
+
 			if(file_exists($path.".htaccess")){
 				$htaccess = @file_get_contents($path.".htaccess");
 			}else{
@@ -405,6 +412,8 @@
 				return array("You have to set <strong><u><a target='_blank' href='https://www.wpfastestcache.com/tutorial/how-to-change-default-permalink-in-wordpress/'>permalinks</a></u></strong>", "error");
 			}else if($res = $this->checkSuperCache($path, $htaccess)){
 				return $res;
+			}else if($this->isPluginActive('cookie-notice/cookie-notice.php')){
+				return array("Cookie Notice & Compliance for GDPR / CCPA needs to be deactivated", "error");
 			}else if($this->isPluginActive('fast-velocity-minify/fvm.php')){
 				return array("Fast Velocity Minify needs to be deactivated", "error");
 			}else if($this->isPluginActive('far-future-expiration/far-future-expiration.php')){
@@ -752,7 +761,7 @@
 				}
 			}
 
-			if($this->isPluginActive('polylang/polylang.php')){
+			if($this->isPluginActive('polylang/polylang.php') || $this->isPluginActive('polylang-pro/polylang.php')){
 				$polylang_settings = get_option("polylang");
 
 				if(isset($polylang_settings["force_lang"])){
@@ -1053,11 +1062,16 @@
 
 				<div class="tabGroup">
 					<?php
-						$tabs = array(array("id"=>"wpfc-options","title" => __("Settings", "wp-fastest-cache" )),
-									  array("id"=>"wpfc-deleteCache","title" => __("Delete Cache", "wp-fastest-cache" )));
+						$tabs = array();
 						
+						array_push($tabs, array("id"=>"wpfc-options","title" => __("Settings", "wp-fastest-cache" )));
+						array_push($tabs, array("id"=>"wpfc-deleteCache","title" => __("Delete Cache", "wp-fastest-cache" )));
 						array_push($tabs, array("id"=>"wpfc-imageOptimisation","title" => __("Image Optimization", "wp-fastest-cache" )));
-						array_push($tabs, array("id"=>"wpfc-premium","title"=>"Premium"));
+
+						if(!class_exists("WpFastestCachePowerfulHtml")){
+							array_push($tabs, array("id"=>"wpfc-premium","title"=>"Premium"));
+						}
+
 						array_push($tabs, array("id"=>"wpfc-exclude","title"=>__("Exclude", "wp-fastest-cache" )));
 						array_push($tabs, array("id"=>"wpfc-cdn","title"=>"CDN"));
 						array_push($tabs, array("id"=>"wpfc-db","title"=>"DB"));

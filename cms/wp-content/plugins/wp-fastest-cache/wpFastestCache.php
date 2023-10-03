@@ -3,7 +3,7 @@
 Plugin Name: WP Fastest Cache
 Plugin URI: http://wordpress.org/plugins/wp-fastest-cache/
 Description: The simplest and fastest WP Cache system
-Version: 1.1.9
+Version: 1.2.0
 Author: Emre Vona
 Author URI: https://www.wpfastestcache.com/
 Text Domain: wp-fastest-cache
@@ -462,7 +462,7 @@ GNU General Public License for more details.
 			}
 
 			// to change content url if a different url is used for other langs
-			if($this->isPluginActive('polylang/polylang.php')){
+			if($this->isPluginActive('polylang/polylang.php') || $this->isPluginActive('polylang-pro/polylang.php')){
 				$url =  parse_url($content_url);
 
 				if($url["host"] != $_SERVER['HTTP_HOST']){

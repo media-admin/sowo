@@ -4,7 +4,7 @@
 		<?php
 		$args = array(
 			'post_status' => 'publish',
-			'posts_per_page' => 6,
+			'posts_per_page' => 3,
 			'post_type' => 'press-release',
 			'orderby' => 'date',
 			'order'   => 'DESC',

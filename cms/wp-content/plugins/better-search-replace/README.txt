@@ -2,8 +2,8 @@
 Contributors: wpengine, deliciousbrains, mattshaw
 Tags: search replace, search and replace, update urls, database, search replace database, update database urls, update live url, better search replace, search&replace
 Requires at least: 3.0.1
-Tested up to: 6.1.1
-Stable tag: 1.4.2
+Tested up to: 6.3.1
+Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -95,7 +95,11 @@ More information on moving WordPress can be found [here](http://codex.wordpress.
 
 == Changelog ==
 
-= 1.4.2 - January 10, 2023 =
+= 1.4.3 - September 5, 2023 =
+* New: Links to plugin documentation, support, feedback, and changelog are now available in the footer of WP Admin
+* Improvement: PHP 8.2 and Better Search Replace are now compatible
+
+= 1.4.2 - January 11, 2023 =
 * Security: Arbitrary tab templates in the `templates` directory can no longer be loaded using a query parameter.
 
 = 1.4.1 - July 25, 2022 =
